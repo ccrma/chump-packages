@@ -1,13 +1,13 @@
 {
     "version": "1.0.0",
-    "api_version": "10.1",
+    "api_version": "10.2",
     "language_version_min": "1.5.2.0",
     "os": "linux",
     "files": [
         {
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/linux/Hydra.chug",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/win/Hydra.chug",
             "local_dir": "./",
-            "checksum": "2556254f48ab7ec1a10301b055153f3b5b571f2e515bc824c36062f3dd3c1ba3"
+            "checksum": "b745eba292322cf4fe6af6b0c9dcd8f887ac16a5b971075debade5f5d99cef69"
         }
     ]
 }
