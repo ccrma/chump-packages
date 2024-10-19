@@ -1,0 +1,16 @@
+{
+    "name": "TestPackage",
+    "authors": [
+        "Nick Shaheed"
+    ],
+    "homepage": "",
+    "repository": "",
+    "license": "gpl3",
+    "description": "This is a test package for running integration tests.",
+    "keywords": [
+        "tests",
+        "useless",
+        "do no use",
+        "seriously"
+    ]
+}

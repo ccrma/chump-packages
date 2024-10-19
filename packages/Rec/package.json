@@ -1,0 +1,14 @@
+{
+    "name": "Rec",
+    "authors": [
+        "Nick Shaheed"
+    ],
+    "homepage": "https://github.com/nshaheed/helper-ck",
+    "repository": "https://github.com/nshaheed/helper-ck",
+    "license": "tbd",
+    "description": "Helper functions for recording to audio files. Supports recording from dac, ugens, and arrays of ugens.",
+    "keywords": [
+        "utility",
+        "recording"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Patch",
+    "authors": [
+        "Nick Shaheed"
+    ],
+    "homepage": "https://github.com/ccrma/chugins/tree/main/Patch",
+    "repository": "https://github.com/ccrma/chugins",
+    "license": "MIT",
+    "description": "Pipe UGen signals into UGen methods directly! The primary use of this is easily and efficiently control UGen parameters with tick-level LFOs.",
+    "keywords": [
+        "LFO",
+        "parameters"
+    ]
+}

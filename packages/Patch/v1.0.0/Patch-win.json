@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "api_version": "10.2",
+    "language_version_min": "1.5.2.5",
+    "os": "windows",
+    "files": [
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chump/Patch/1.0.0/win/Patch.chug",
+            "local_dir": "./",
+            "checksum": "76b28015e6383e31f28d1ac6acda4974e1e1fcd744212b28e158aa3fc3c98096"
+        }
+    ]
+}
