@@ -1,0 +1,110 @@
+{
+    "version": "0.9.1",
+    "api_version": "10.2",
+    "language_version_min": "1.5.4.0",
+    "os": "windows",
+    "files": [
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/Rave.chug",
+            "file_type": "package",
+            "local_dir": "./",
+            "checksum": "77a88258216701b892aa36335781bae1793771a9614b1035c2ff2d5bce7de24a"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_data/rave_chafe_data_rt.ts",
+            "file_type": "data",
+            "local_dir": "./",
+            "checksum": "9515da295c0f012f52d7684c8795a5f5beaf6f299d675f5b5e725a4818763391"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/asmjit.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "cae408ce0f05e6dee8b69a6a75774affc8ce6de342de51c3275d96bd04b4fad4"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/c10.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "06901b053d54da064ffcc9ba2bac2cf662ddaa9f621218ef434b575b8bcd5757"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/fbgemm.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "6c159c691b220fcc6c3d777be117eb8fe177947518e31b8249d55161a7849d13"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/fbjni.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "0e96a438b57f6792fbc9acc4ffde06808f7c97a0e1f784f998f56332b3f12b37"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/libiomp5md.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "0ad71f466d115d353dce94ba32b63e288f48198e89f551d46dcce461fedbd195"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/libiompstubs5md.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "5deddfc8611d49ac01c42dd5e8b857df0fe8d9e71306e3784e3a5da24ac2d6be"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/pytorch_jni.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "30d09d62a6026888c0b8285e95cf2fbc4f5404f1fbfee9ed9deb2589d60b5e0b"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/torch.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "4d10836831f550596facf68c3ea093541cb2ec9a698cab0570d2d8dc696f8277"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/torch_cpu.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "716885dc5c165cb32e49ee41927bdf906fa21e2de1418e6cc53edfead9557e50"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/torch_global_deps.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "f9ca4dd277119d3cb0d7881ecba08cd89372e7c85ddb941e28065a0db8ccd79b"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_deps/uv.dll",
+            "file_type": "deps",
+            "local_dir": "./",
+            "checksum": "d6e517084425092066d4b26678320eb60edf2c79ade855bd67b829113f999da6"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_docs/README.md",
+            "file_type": "docs",
+            "local_dir": "./",
+            "checksum": "dfd43743bc4d8d046c38068fe47c03ae2172b9dc4aed18badfdcd28ef982282e"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_examples/load_test.ck",
+            "file_type": "example",
+            "local_dir": "./",
+            "checksum": "f02fad333117e195fdfd5f92feb12faa09fd3c37eccadcf4fe26217d4cf7fd56"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_examples/memory_test.ck",
+            "file_type": "example",
+            "local_dir": "./",
+            "checksum": "bb363410843eb7f20dc2addac7976e4a4c56a653eccbbd6eb246f7d145810529"
+        },
+        {
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.1/win/_examples/rave_test.ck",
+            "file_type": "example",
+            "local_dir": "./",
+            "checksum": "9a417e8e6611ab7750fd8eccbc1b7e797a52b22c2e6f8f32388adf553b682614"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Rave",
+    "authors": [
+        "Nick Shaheed"
+    ],
+    "homepage": "https://github.com/ccrma/chugin-rave",
+    "repository": "https://github.com/ccrma/chugin-rave",
+    "license": "tbd",
+    "description": "UGen to load and run RAVE (Realtime Audio Variational autoEncoder) models (Caillon and Esling). See https://github.com/acids-ircam/RAVE for more info.",
+    "keywords": [
+        "RAVE",
+        "UGen",
+        "Machine Learning",
+        "AI",
+        "VAE"
+    ]
+}

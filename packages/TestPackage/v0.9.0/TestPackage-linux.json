@@ -6,6 +6,7 @@
     "files": [
         {
             "url": "https://ccrma.stanford.edu/~nshaheed/chugins/test_package/1.0.0/doesnotexist.ck",
+            "file_type": "package",
             "local_dir": "./",
             "checksum": "3333"
         }
