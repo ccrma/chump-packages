@@ -1,7 +1,15 @@
 {
     "version": "0.9.1",
-    "api_version": "10.2",
-    "language_version_min": "1.5.4.0",
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "language_version_min": {
+        "mega": 1,
+        "major": 5,
+        "minor": 4,
+        "patch": 0
+    },
     "os": "windows",
     "files": [
         {
