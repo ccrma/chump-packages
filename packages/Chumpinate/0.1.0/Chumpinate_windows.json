@@ -3,12 +3,14 @@
         "major": 10,
         "minor": 2
     },
-    "files": {
-        "checksum": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
-        "file_type": "zip",
-        "local_dir": "./",
-        "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumpinate/0.1.0/windows/Chumpinate.zip"
-    },
+    "files": [
+        {
+            "checksum": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumpinate/0.1.0/windows/Chumpinate.zip"
+        }
+    ],
     "language_version_min": {
         "major": 5,
         "mega": 1,
