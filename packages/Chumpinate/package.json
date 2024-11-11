@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Nick Shaheeed"
+    ],
+    "description": "Two classes (Package & PackageVersion) to help create packages to be used with ChuMP (the ChucK Manager of Packages)",
+    "homepage": "https://github.com/ccrma/chump",
+    "keywords": [
+        "util",
+        "chump",
+        "packages"
+    ],
+    "license": "tbd",
+    "name": "Chumpinate",
+    "repository": "https://github.com/ccrma/chump"
+}
