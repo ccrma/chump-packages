@@ -4,6 +4,7 @@
         "major": 10,
         "minor": 1
     },
+    "arch": "all",
     "language_version_min": {
         "mega": 1,
         "major": 5,

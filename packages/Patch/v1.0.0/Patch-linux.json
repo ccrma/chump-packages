@@ -4,6 +4,7 @@
         "major": 10,
         "minor": 2
     },
+    "arch": "x86_64",
     "language_version_min": {
         "mega": 1,
         "major": 5,

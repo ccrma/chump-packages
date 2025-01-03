@@ -6,6 +6,7 @@
         "minor": 2,
         "patch": 0
     },
+    "arch": "all",
     "os": "linux",
     "files": [
         {

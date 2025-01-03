@@ -3,6 +3,7 @@
         "major": 10,
         "minor": 2
     },
+    "arch": "x86_64",
     "files": [
         {
             "checksum": "42139fe4272a08e912edea4a80618f3898e39a0ec05d0f47d0bba5e55200fb99",
