@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Spencer Salazar"
+    ],
+    "description": "Chugin for loading FluidSynth soundfonts",
+    "homepage": "https://github.com/ccrma/chugins",
+    "keywords": [
+        "midi",
+        "FluidSynth",
+        "UGen"
+    ],
+    "license": "MIT",
+    "name": "FluidSynth",
+    "repository": "https://github.com/ccrma/chugins"
+}
