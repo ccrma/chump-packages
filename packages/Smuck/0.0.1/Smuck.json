@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "519bb3906558e4e14d8d00f5cc51f17c434f2e6df5574aa9cc715bab6afb3aca",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~alexhan/Smuck/0.0.1/Smuck.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 5
+    },
+    "os": "all",
+    "version": "0.0.1"
+}

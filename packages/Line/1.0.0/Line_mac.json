@@ -3,12 +3,13 @@
         "major": 10,
         "minor": 2
     },
+    "arch": "universal",
     "files": [
         {
-            "checksum": "b05459ba35dc1d59bca533ff61eb2a61d8ff97aa37f19379eabe8bde8e633117",
+            "checksum": "1a8f8fee0825cc3de19a9affc0d174e7f060c84b592f45402b14615d2c662a1a",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumpinate/0.1.0/linux/Chumpinate.zip"
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Line/1.0.0/mac/Line.zip"
         }
     ],
     "language_version_min": {
@@ -17,6 +18,6 @@
         "minor": 4,
         "patch": 0
     },
-    "os": "linux",
-    "version": "0.1.0"
+    "os": "mac",
+    "version": "1.0.0"
 }

@@ -1,15 +1,15 @@
 {
     "authors": [
-        "Nick Shaheed"
+        "Spencer Salazar"
     ],
-    "description": "Envelope of a arbitrary ramps (ala Max/PD's line~ object)",
+    "description": "Chugin for loading FluidSynth soundfonts",
     "homepage": "https://github.com/ccrma/chugins",
     "keywords": [
-        "util",
-        "envs",
-        "envelopes"
+        "midi",
+        "FluidSynth",
+        "UGen"
     ],
     "license": "MIT",
-    "name": "Patch",
+    "name": "FluidSynth",
     "repository": "https://github.com/ccrma/chugins"
 }
