@@ -3,13 +3,13 @@
         "major": 10,
         "minor": 2
     },
-    "arch": "x86_64",
+    "arch": "universal",
     "files": [
         {
-            "checksum": "13bb59aac01b71d06e9e35d5001287a6f846db26f7098f02c244a72852f857fb",
+            "checksum": "a1928742cb35aad08f17a17ce50ac119bf1ab4fc8f190b17ce031720e48a0a48",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumpinate/0.1.0/windows/Chumpinate.zip"
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/FluidSynth/1.0.0/mac/FluidSynth.zip"
         }
     ],
     "language_version_min": {
@@ -18,6 +18,6 @@
         "minor": 4,
         "patch": 0
     },
-    "os": "windows",
-    "version": "0.1.0"
+    "os": "mac",
+    "version": "1.0.0"
 }
