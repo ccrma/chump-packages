@@ -6,7 +6,7 @@
     "arch": "x86_64",
     "files": [
         {
-            "checksum": "03ea1564fab90a02c99e1e42ee3fddd2e141ee1fb3ab089c566a047a4c1b6a7d",
+            "checksum": "4bcc62d497017c2fffbd58e3727537efd06fb2db95445beb5449ed0a52274fc4",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumpinate/0.1.0/linux/Chumpinate.zip"
