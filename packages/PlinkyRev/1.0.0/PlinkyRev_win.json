@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "x86_64",
+    "files": [
+        {
+            "checksum": "0c8861eeb2ffae4417e8b25f842ff47f2a1487aefa4aafc8637ba9ea948e9ff2",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/PlinkyRev/1.0.0/windows/PlinkyRev.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "windows",
+    "version": "1.0.0"
+}
