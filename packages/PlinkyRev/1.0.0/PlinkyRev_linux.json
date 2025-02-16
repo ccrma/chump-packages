@@ -6,10 +6,10 @@
     "arch": "x86_64",
     "files": [
         {
-            "checksum": "73a02e1d1fc32702e9c7d615b0977d845c3bdca9dc9d8c65b41d21af24007556",
+            "checksum": "df0cd0fb6e2fc2367799d895f6fb629a7e35ad15234db75cd5948b8ea6c06bdf",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumpinate/0.1.0/linux/Chumpinate.zip"
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/PlinkyRev/1.0.0/linux/PlinkyRev.zip"
         }
     ],
     "language_version_min": {
@@ -19,5 +19,5 @@
         "patch": 0
     },
     "os": "linux",
-    "version": "0.1.0"
+    "version": "1.0.0"
 }
