@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "universal",
+    "files": [
+        {
+            "checksum": "6d2ae3a408d7bb63fc1c99110c425dacd902a1c140f02b136b0624265272f556",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/PlinkyRev/1.0.0/mac/PlinkyRev.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "1.0.0"
+}

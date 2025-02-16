@@ -1,0 +1,16 @@
+{
+    "authors": [
+        "Nick Shaheed"
+    ],
+    "description": "This stereo reverb is a port of the Plinky synth's reverb (https://plinkysynth.com/)",
+    "homepage": "https://github.com/nshaheed/PlinkyRev-chugin/",
+    "keywords": [
+        "Effect",
+        "Reverb",
+        "UGen",
+        "Plinky"
+    ],
+    "license": "MIT",
+    "name": "PlinkyRev",
+    "repository": "https://github.com/nshaheed/PlinkyRev-chugin/"
+}
