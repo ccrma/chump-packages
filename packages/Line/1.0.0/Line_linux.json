@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "x86_64",
+    "files": [
+        {
+            "checksum": "2a43a6124647bb08248f2bed6a6427269a987bdb9b0b7f1b4cd251cd38b051fc",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Line/1.0.0/linux/Line.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "linux",
+    "version": "1.0.0"
+}
