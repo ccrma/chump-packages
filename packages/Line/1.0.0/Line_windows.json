@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "x86_64",
+    "files": [
+        {
+            "checksum": "fcd82c473ca44ac457d8e846e270d1ecdcadbabd44a473562e4ef73699544bc0",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Line/1.0.0/windows/Line.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "windows",
+    "version": "1.0.0"
+}
