@@ -2,10 +2,10 @@
     "arch": "all",
     "files": [
         {
-            "checksum": "128e3ed047b3e0a9c4a63854b40821d7afa52946e0678881913f89e880d86bf5",
+            "checksum": "c18df7b520f1762dc002519dbe1919686ef72ff3bdb4595f37e34f74ac050a55",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~alexhan/Smuck/0.0.1/Smuck.zip"
+            "url": "https://chuck.stanford.edu/release/chump/Smuck/0.0.1/Smuck.zip"
         }
     ],
     "language_version_min": {
