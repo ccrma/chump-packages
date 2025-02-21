@@ -2,7 +2,7 @@
     "arch": "all",
     "files": [
         {
-            "checksum": "519bb3906558e4e14d8d00f5cc51f17c434f2e6df5574aa9cc715bab6afb3aca",
+            "checksum": "128e3ed047b3e0a9c4a63854b40821d7afa52946e0678881913f89e880d86bf5",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~alexhan/Smuck/0.0.1/Smuck.zip"
