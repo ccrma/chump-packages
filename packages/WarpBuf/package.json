@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Nick Shaheeed"
+    ],
+    "description": "Envelope of a arbitrary ramps (ala Max/PD's line~ object)",
+    "homepage": "https://github.com/ccrma/chugins",
+    "keywords": [
+        "util",
+        "envs",
+        "envelopes"
+    ],
+    "license": "MIT",
+    "name": "WarpBuf",
+    "repository": "https://github.com/ccrma/chugins"
+}
