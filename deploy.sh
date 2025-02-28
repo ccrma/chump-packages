@@ -12,7 +12,11 @@ fi
 
 ./chump/builddir-release/scripts/generate_manifest ./ > manifest.json
 
-scp manifest.json nshaheed@ccrma-gate.stanford.edu:~/Library/Web/chump 
+VER="$(jq '.["manifest-version"]' manifest.json)"
+VER_DIR="~/Library/Web/chump/manifest/v${VER}/"
+
+ssh nshaheed@ccrma-gate.stanford.edu "mkdir -p ${VER_DIR}"
+scp manifest.json "nshaheed@ccrma-gate.stanford.edu:${VER_DIR}"
 
 
 
