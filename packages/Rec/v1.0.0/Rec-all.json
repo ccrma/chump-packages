@@ -6,6 +6,12 @@
         "minor": 2,
         "patch": 0
     },
+    "language_version_max": {
+        "mega": 1,
+        "major": 5,
+        "minor": 4,
+        "patch": 1
+    },    
     "os": "any",
     "arch": "all",
     "files": [
