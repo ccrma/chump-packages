@@ -2,7 +2,7 @@
     "arch": "all",
     "files": [
         {
-            "checksum": "a3b47b6729552d3e2ee7c1ecc07a5f55a53f88bf96799e334716b5019f8c1d0a",
+            "checksum": "6479c9c6405ef15c6580cdd41acd5ff2fc36b01feee356949478dc18f05b3170",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://chuck.stanford.edu/release/chump/smuck/0.1.0/smuck.zip"
