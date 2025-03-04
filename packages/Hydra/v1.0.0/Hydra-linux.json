@@ -14,7 +14,7 @@
     "os": "linux",
     "files": [
         {
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/linux/Hydra.chug",
+            "url": "https://chuck.stanford.edu/release/chump/Hydra/files/1.0.0/linux/Hydra.chug",
             "file_type": "package",
             "local_dir": "./",
             "checksum": "a7fe1ae9b40e8fd37044ffa763693ec8b8f4d8a64c7c770c7577c2454fdd48b6"

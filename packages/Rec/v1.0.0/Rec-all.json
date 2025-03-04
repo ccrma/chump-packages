@@ -16,7 +16,7 @@
     "arch": "all",
     "files": [
         {
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rec/1.0.0/Rec.ck",
+            "url": "https://chuck.stanford.edu/release/chump/Rec/files/1.0.0/Rec.ck",
             "file_type": "package",
             "local_dir": "./",
             "checksum": "6d9390db73045c997f7535ee56c404f976cc724caabb301ad5693eb1bd53ff33"

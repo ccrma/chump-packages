@@ -9,7 +9,7 @@
             "checksum": "b4da7228af246efe38bff2772352e2e37282081b664ffee597e7111850cbdccf",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/WarpBuf/0.0.1/mac/WarpBuf_arm64.zip"
+            "url": "https://chuck.stanford.edu/release/chump/WarpBuf/files/0.0.1/mac/WarpBuf_arm64.zip"
         }
     ],
     "language_version_min": {

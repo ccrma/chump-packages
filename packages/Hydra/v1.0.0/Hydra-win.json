@@ -14,7 +14,7 @@
     "os": "windows",
     "files": [
         {
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/win/Hydra.chug",
+            "url": "https://chuck.stanford.edu/release/chump/Hydra/files/1.0.0/win/Hydra.chug",
             "file_type": "package",
             "local_dir": "./",
             "checksum": "b745eba292322cf4fe6af6b0c9dcd8f887ac16a5b971075debade5f5d99cef69"
