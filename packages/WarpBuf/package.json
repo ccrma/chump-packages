@@ -1,13 +1,14 @@
 {
     "authors": [
-        "Nick Shaheeed"
+        "David Braun"
     ],
-    "description": "Envelope of a arbitrary ramps (ala Max/PD's line~ object)",
+    "description": "A UGen for high-quality time-stretching and pitch-shifting of audio files; also supports Ableton .asd files",
     "homepage": "https://github.com/ccrma/chugins",
     "keywords": [
         "util",
-        "envs",
-        "envelopes"
+        "audio processing",
+        "time-stretching",
+        "pitch-shifting"
     ],
     "license": "MIT",
     "name": "WarpBuf",

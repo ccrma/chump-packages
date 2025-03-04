@@ -2,14 +2,14 @@
     "authors": [
         "Nick Shaheeed"
     ],
-    "description": "Two classes (Package & PackageVersion) to help create packages to be used with ChuMP (the ChucK Manager of Packages)",
-    "homepage": "https://github.com/ccrma/chump",
+    "description": "Two classes (Package and PackageVersion) to faciliate creating new packages for ChuMP",
+    "homepage": "https://chuck.stanford.edu/chump/",
     "keywords": [
         "util",
         "chump",
         "packages"
     ],
-    "license": "tbd",
+    "license": "MIT",
     "name": "Chumpinate",
     "repository": "https://github.com/ccrma/chump"
 }
