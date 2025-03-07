@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "universal",
+    "files": [
+        {
+            "checksum": "db5a65cbcc31ebc1195a2aee31471b8ed529e3d6ec9c7743be9df9e7d53cbcab",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.2/mac/Rave.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "0.9.2"
+}
