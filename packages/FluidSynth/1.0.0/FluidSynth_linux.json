@@ -6,7 +6,7 @@
     "arch": "x86_64",
     "files": [
         {
-            "checksum": "b62854554c914892b835bf1416736556d9d559f6667930680adb42392adfc872",
+            "checksum": "2fe3b08b1d6b0064dc1979fc0580a28d155fd83dcab7f797da38ca235bbe65eb",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~nshaheed/chugins/FluidSynth/1.0.0/linux/FluidSynth.zip"
