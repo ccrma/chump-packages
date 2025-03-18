@@ -6,10 +6,10 @@
     "arch": "x86_64",
     "files": [
         {
-            "checksum": "aaac3561cbabf453e17a0093668f512eef24dd846ef5e226ae37862022f131c2",
+            "checksum": "b3824e33f433a806b727eca986e523565dd950a21c3d117ca0e6141b29969ce5",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://chuck.stanford.edu/release/chump/FluidSynth/files/1.0.0/win/FluidSynth.zip"
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/FluidSynth/1.0.0/win/FluidSynth.zip"
         }
     ],
     "language_version_min": {
