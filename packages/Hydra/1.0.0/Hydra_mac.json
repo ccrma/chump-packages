@@ -6,7 +6,7 @@
     "arch": "universal",
     "files": [
         {
-            "checksum": "93ee526d0942c1621ec7341286ca3f30c6391a1dbec86727ddbf70ce6aff03b1",
+            "checksum": "43c4eebde3956cf8f1ede52c43a3edb94ce08d6f5c8b01e6c26a7be8fc9e0b20",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/1.0.0/mac/Hydra.zip"
