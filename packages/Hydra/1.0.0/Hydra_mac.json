@@ -6,16 +6,16 @@
     "arch": "universal",
     "files": [
         {
-            "checksum": "41499e946deb4ecd490a89a82450e2fc9e5c5d88c0e3addb4f278f9888df944f",
+            "checksum": "43c4eebde3956cf8f1ede52c43a3edb94ce08d6f5c8b01e6c26a7be8fc9e0b20",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/FluidSynth/1.0.0/mac/FluidSynth.zip"
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/1.0.0/mac/Hydra.zip"
         }
     ],
     "language_version_min": {
         "major": 5,
         "mega": 1,
-        "minor": 4,
+        "minor": 5,
         "patch": 0
     },
     "os": "mac",

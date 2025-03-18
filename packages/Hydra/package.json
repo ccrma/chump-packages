@@ -1,14 +1,14 @@
 {
-    "name": "Hydra",
     "authors": [
         "Nick Shaheed"
     ],
-    "homepage": "https://github.com/nshaheed/hydra-chugin",
-    "repository": "https://github.com/nshaheed/hydra-chugin",
-    "license": "MIT",
     "description": "A wrapper for the Python configuration framework Hydra",
+    "homepage": "https://github.com/nshaheed/hydra-chugin",
     "keywords": [
         "configs",
         "python"
-    ]
+    ],
+    "license": "MIT",
+    "name": "Hydra",
+    "repository": "https://github.com/nshaheed/hydra-chugin"
 }
