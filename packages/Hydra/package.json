@@ -5,8 +5,8 @@
     ],
     "homepage": "https://github.com/nshaheed/hydra-chugin",
     "repository": "https://github.com/nshaheed/hydra-chugin",
-    "license": "tbd",
-    "description": "This chugin is a wrapper around the python configuration framework Hydra.",
+    "license": "MIT",
+    "description": "A wrapper for the Python configuration framework Hydra",
     "keywords": [
         "configs",
         "python"

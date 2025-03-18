@@ -1,17 +1,17 @@
 {
-    "name": "Rave",
     "authors": [
         "Nick Shaheed"
     ],
+    "description": "A UGen to load and synthesize real-time audio from variational autoencoder models. Based on IRCAM's RAVE (Realtime Audio Variational autoEncoder) by Caillon and Esling. (See https://github.com/acids-ircam/RAVE for more info.)",
     "homepage": "https://github.com/ccrma/chugin-rave",
-    "repository": "https://github.com/ccrma/chugin-rave",
-    "license": "tbd",
-    "description": "UGen to load and run RAVE (Realtime Audio Variational autoEncoder) models (Caillon and Esling). See https://github.com/acids-ircam/RAVE for more info.",
     "keywords": [
         "RAVE",
         "UGen",
-        "Machine Learning",
+        "machine learning",
         "AI",
         "VAE"
-    ]
+    ],
+    "license": "Creative Commons Attribution-NonCommercial 4.0 International",
+    "name": "Rave",
+    "repository": "https://github.com/ccrma/chugin-rave"
 }

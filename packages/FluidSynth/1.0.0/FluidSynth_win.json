@@ -9,7 +9,7 @@
             "checksum": "aaac3561cbabf453e17a0093668f512eef24dd846ef5e226ae37862022f131c2",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/FluidSynth/1.0.0/win/FluidSynth.zip"
+            "url": "https://chuck.stanford.edu/release/chump/FluidSynth/files/1.0.0/win/FluidSynth.zip"
         }
     ],
     "language_version_min": {

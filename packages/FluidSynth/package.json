@@ -2,10 +2,10 @@
     "authors": [
         "Spencer Salazar"
     ],
-    "description": "Chugin for loading FluidSynth soundfonts",
+    "description": "A UGen for loading and rendering soundfonts",
     "homepage": "https://github.com/ccrma/chugins",
     "keywords": [
-        "midi",
+        "MIDI",
         "FluidSynth",
         "UGen"
     ],

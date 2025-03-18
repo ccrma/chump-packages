@@ -2,13 +2,13 @@
     "authors": [
         "David Braun"
     ],
-    "description": "With WarpBuf you can time-stretch and independently transpose the pitch of an audio file. Also supports Ableton .asd files.",
+    "description": "A UGen for high-quality time-stretching and pitch-shifting of audio files; also supports Ableton .asd files",
     "homepage": "https://github.com/ccrma/chugins",
     "keywords": [
-        "sampler",
-        "sndbuf",
-        "ableton",
-        "rubberband"
+        "util",
+        "audio processing",
+        "time-stretching",
+        "pitch-shifting"
     ],
     "license": "MIT",
     "name": "WarpBuf",

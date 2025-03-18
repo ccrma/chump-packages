@@ -10,7 +10,7 @@
     "os": "linux",
     "files": [
         {
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/test_package/1.0.0/hello.ck",
+            "url": "https://chuck.stanford.edu/release/chump/TestPackage/files/1.0.0/hello.ck",
             "file_type": "package",
             "local_dir": "./",
             "checksum": "d9865523a214fbdc00eadcf4e07a2c23746fbcb0af4bdbfb4e700fcf33894ce2"

@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Alex Han",
+        "Kiran Bhat",
+        "Ge Wang"
+    ],
+    "description": "A framework for symbolic music notation and playback in ChucK",
+    "homepage": "https://chuck.stanford.edu/smuck/",
+    "keywords": [
+        "notation",
+        "symbolic",
+        "smuckish",
+        "music"
+    ],
+    "license": "MIT",
+    "name": "smuck",
+    "repository": "https://github.com/ccrma/smuck/"
+}

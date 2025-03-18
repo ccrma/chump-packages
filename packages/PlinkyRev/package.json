@@ -2,11 +2,11 @@
     "authors": [
         "Nick Shaheed"
     ],
-    "description": "This stereo reverb is a port of the Plinky synth's reverb (https://plinkysynth.com/)",
+    "description": "A stereo reverb UGen using Plinky synth's reverb (https://plinkysynth.com/)",
     "homepage": "https://github.com/nshaheed/PlinkyRev-chugin/",
     "keywords": [
-        "Effect",
-        "Reverb",
+        "effect",
+        "reverb",
         "UGen",
         "Plinky"
     ],

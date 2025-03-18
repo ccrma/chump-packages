@@ -5,8 +5,8 @@
     ],
     "homepage": "",
     "repository": "",
-    "license": "gpl3",
-    "description": "This is a test package for running integration tests with dirs.",
+    "license": "GPL 3.0",
+    "description": "A package for running integration tests with directories.",
     "keywords": [
         "tests",
         "useless",
