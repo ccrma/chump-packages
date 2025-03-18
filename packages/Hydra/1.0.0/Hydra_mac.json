@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "universal",
+    "files": [
+        {
+            "checksum": "93ee526d0942c1621ec7341286ca3f30c6391a1dbec86727ddbf70ce6aff03b1",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Hydra/1.0.0/mac/Hydra.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "1.0.0"
+}
