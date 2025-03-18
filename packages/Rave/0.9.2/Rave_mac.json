@@ -6,7 +6,7 @@
     "arch": "universal",
     "files": [
         {
-            "checksum": "5f678872b2820048a0040ec5cf711c4f9890b3776b24fb460964a0adc0497080",
+            "checksum": "1959799feb5ca17d01cfdc95ff647aef0d56d9bbfe571df1e01d01d64f919c94",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Rave/0.9.2/mac/Rave.zip"
