@@ -18,6 +18,6 @@
         "minor": 4,
         "patch": 0
     },
-    "os": "win",
+    "os": "windows",
     "version": "1.0.0"
 }
