@@ -1,5 +1,13 @@
 # deploy the manifest.json to CCRMA servers
 
+# check if jq is installed
+if ! command -v jq 2>&1 >/dev/null
+then
+    echo "jq could not be found, please install"
+    exit 1
+fi
+
+
 # download chump to get the scripts
 if [ ! -d "chump" ] ; then
     git clone https://github.com/ccrma/chump.git
