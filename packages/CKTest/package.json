@@ -1,0 +1,16 @@
+{
+    "authors": [
+        "Terry Feng"
+    ],
+    "description": "A testing libary and framework for ChucK. Contains assert() and expect() functions.",
+    "homepage": "https://github.com/terryzfeng/chuck-test",
+    "keywords": [
+        "testing",
+        "unit tests",
+        "assert",
+        "expect"
+    ],
+    "license": "tbd",
+    "name": "CKTest",
+    "repository": "https://github.com/terryzfeng/chuck-test"
+}

@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "568e37715283afb641446bcc7b4dbb11134bb9c921be7cd6f571acdc832b92d8",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~tzfeng/projects/chuck-test/dist/1.0.0/CKTest.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 5
+    },
+    "os": "any",
+    "version": "1.0.0"
+}
