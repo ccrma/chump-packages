@@ -1,0 +1,19 @@
+{
+    "arch": "x86_64",
+    "files": [
+        {
+            "checksum": "82917312ce191f47fefc2b231b9912595e2f56b1ac6225fd36a349b7f9ef9bfd",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~azaday/HashMap-windows.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "windows",
+    "version": "1.0.0"
+}

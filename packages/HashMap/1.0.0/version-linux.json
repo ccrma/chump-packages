@@ -1,0 +1,19 @@
+{
+    "arch": "x86_64",
+    "files": [
+        {
+            "checksum": "3aae542135dbbe3d0fd46467e7a619e6f7771ff8689c32c5df8b78f3277ea9ef",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~azaday/HashMap-linux.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "linux",
+    "version": "1.0.0"
+}
