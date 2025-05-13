@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "universal",
+    "files": [
+        {
+            "checksum": "1cc40e0659697df4c7b4b1674032bfe8756a6840fe8692af4c0c7f32b01e1a57",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/FluidSynth/1.0.1/mac/FluidSynth.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "1.0.1"
+}
