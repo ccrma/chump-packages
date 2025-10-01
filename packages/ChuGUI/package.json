@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Ben Hoang"
+    ],
+    "description": "ChuGUI is a flexible immediate-mode 2D GUI toolkit for ChuGL.",
+    "homepage": "https://ccrma.stanford.edu/~hoangben/ChuGUI/",
+    "keywords": [
+        "GUI",
+        "immediate-mode",
+        "2D",
+        "UI",
+        "ChuGL",
+        "ChuGUI"
+    ],
+    "license": "MIT",
+    "name": "ChuGUI",
+    "repository": "https://github.com/Oran2009/ChuGUI/"
+}
