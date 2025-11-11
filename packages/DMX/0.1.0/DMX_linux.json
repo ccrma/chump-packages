@@ -1,11 +1,11 @@
 {
-    "arch": "all",
+    "arch": "x86_64",
     "files": [
         {
-            "checksum": "e002419cd6690582b9c0ebb8b206f2ccf058f4a47ad35a6ecc9dc5eec3fad131",
+            "checksum": "535e74f6b7f3e880e46e4f241b29b5a277f1f5e6b952fe06a20a743d59de69bc",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/releases/0.1.0/linux/DMX.zip"
+            "url": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/releases/0.1.0/DMX_linux.zip"
         }
     ],
     "language_version_min": {
