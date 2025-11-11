@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "b0db5da8b63a58c72c2be202707555c5b33dcb1d90a409e875639ecccc802c78",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/releases/0.1.0/windows/DMX.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "windows",
+    "version": "0.1.0"
+}

@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "e002419cd6690582b9c0ebb8b206f2ccf058f4a47ad35a6ecc9dc5eec3fad131",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/releases/0.1.0/linux/DMX.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "linux",
+    "version": "0.1.0"
+}
