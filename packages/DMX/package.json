@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Ben Hoang"
+    ],
+    "description": "ChucK-DMX: A plugin for ChucK that enables the sending of DMX over serial or over ethernet via the ArtNet and sACN network protocols.",
+    "homepage": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/",
+    "keywords": [
+        "DMX",
+        "lighting",
+        "light bulbs",
+        "ArtNet",
+        "sACN",
+        "Serial"
+    ],
+    "license": "MIT",
+    "name": "DMX",
+    "repository": "https://github.com/Oran2009/ChucK-DMX/"
+}

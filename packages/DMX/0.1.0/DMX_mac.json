@@ -1,0 +1,19 @@
+{
+    "arch": "universal",
+    "files": [
+        {
+            "checksum": "368e363d220043e4718b98fcdb9f22e1ac237670747fa08e6647920aa8e86823",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/releases/0.1.0/DMX_mac.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "0.1.0"
+}
