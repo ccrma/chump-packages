@@ -2,7 +2,7 @@
     "arch": "universal",
     "files": [
         {
-            "checksum": "368e363d220043e4718b98fcdb9f22e1ac237670747fa08e6647920aa8e86823",
+            "checksum": "ac99abbd3f98be319bf2c9870e9fc40c1ee70ce9fe459791dc24aea9a65020bf",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~hoangben/ChucK-DMX/releases/0.1.0/DMX_mac.zip"
