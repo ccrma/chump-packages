@@ -2,10 +2,10 @@
     "arch": "all",
     "files": [
         {
-            "checksum": "3c19e95c43bce12f797c8f599ef7bad24b74076e1f6332dc11bcaa87360daa5d",
+            "checksum": "d56f75f52ee8cbb826fbf81c8c5086de06d7617fc78be7a957ade1d6a5bee9b2",
             "file_type": "zip",
             "local_dir": "./",
-            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/SideWarp/1.0.0/SideWarp.zip"
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/AudLabels/0.1.0/AudLabels.zip"
         }
     ],
     "language_version_min": {
@@ -15,5 +15,5 @@
         "patch": 6
     },
     "os": "any",
-    "version": "1.0.0"
+    "version": "0.1.0"
 }
