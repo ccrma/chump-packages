@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Nick Shaheed"
+    ],
+    "description": "Dynamic playback-rate adjusting via a sidechain. A fun disk-scratching effect",
+    "homepage": "https://github.com/nshaheed/helper-ck",
+    "keywords": [
+        "UGen",
+        "Effect",
+        "Sidechain"
+    ],
+    "license": "MIT",
+    "name": "SideWarp",
+    "repository": "https://github.com/nshaheed/helper-ck"
+}

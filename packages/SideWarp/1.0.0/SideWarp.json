@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "7817cddada9656da9bd2351e187e4dc581a288467a6ba78b8d88b862a8b6174a",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/SideWarp"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 6
+    },
+    "os": "any",
+    "version": "1.0.0"
+}
