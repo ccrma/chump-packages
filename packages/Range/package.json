@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Nick Shaheeed"
+    ],
+    "description": "A UGen that linearly maps an input range to an output range.",
+    "homepage": "https://github.com/ccrma/chugins",
+    "keywords": [
+        "util",
+        "UGen",
+        "LFO"
+    ],
+    "license": "MIT",
+    "name": "Range",
+    "repository": "https://github.com/ccrma/chugins"
+}

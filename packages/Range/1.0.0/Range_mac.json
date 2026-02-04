@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "universal",
+    "files": [
+        {
+            "checksum": "f711abfc2fbd11cf5a66b4599aefbc0f2cf0c108776f24b0028afb1b78d0ded1",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Range/1.0.0/mac/Range.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "1.0.0"
+}
