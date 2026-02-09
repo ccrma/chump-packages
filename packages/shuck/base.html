@@ -1,0 +1,1231 @@
+<html>
+<link rel="stylesheet" type="text/css" href="./docs_files/ckdoc.css" />
+<title>Base Classes</title>
+<body>
+<a name="top"/>
+<div id="title">
+<div class="titleL">
+<div style="display: flex; align-items: center;"><div class="inline titlelogo"><a href="https://chuck.stanford.edu/" target="_blank"><img src="https://chuck.stanford.edu/doc/images/chuck-logo2023w.png" /> </div><div class="inline"><h1><a href="./">ChucK Class Library Reference</a></h1></div>
+<div class="inline gray"><h1>&nbsp;&nbsp;<span style="color:black">/</span>&nbsp;&nbsp;Base Classes</h1></div>
+</div>
+</div>
+</div>
+<div id="body">
+<div class="toc"><a id="toc"/>
+<p class="toc_class"><a href="#Object" class="ckdoc_typename ckdoc_type_object">Object</a></p>
+<p class="toc_class"><a href="#Event" class="ckdoc_typename ckdoc_type_object">Event</a></p>
+<p class="toc_class"><a href="#Shred" class="ckdoc_typename ckdoc_type_object">Shred</a></p>
+<p class="toc_class"><a href="#Math" class="ckdoc_typename ckdoc_type_object">Math</a></p>
+<p class="toc_class"><a href="#Machine" class="ckdoc_typename ckdoc_type_object">Machine</a></p>
+<p class="toc_class"><a href="#Std" class="ckdoc_typename ckdoc_type_object">Std</a></p>
+<p class="toc_class"><a href="#string" class="ckdoc_typename ckdoc_type_object">string</a></p>
+<p class="toc_class"><a href="#@array" class="ckdoc_typename ckdoc_type_object">@array</a></p>
+</div>
+<div class="classes">
+<p class="group_desc">Base data structure for structured harmony.</p>
+<a name="Object" /><div class="class">
+<h2 class="class_title" name="Object">Tree</h2>
+<p class="class_description">Base class for structured harmony.<p>
+<h3 class="class_section_header">constructors</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="membername">Tree</span>()</p>
+<p class="member_description">Default constructor for Tree.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="membername">Tree</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span> scales)</p>
+<p class="member_description">Initialize a tree using a string of scales (e.g. "major scale => major chord").</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="membername">Tree</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[][] scales)</p>
+<p class="member_description">Initialize a tree using arrays of MIDI numbers (e.g. [ [0,2,4,5,7,9,11], [0,4,7] ]).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="membername">Tree</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span> scales, <span class="ckdoc_typename ckdoc_type_primitive">string</span> offsets)</p>
+<p class="member_description">Initialize a tree using a string of scales and a string of offsets (e.g. "a2 + b-1").</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="membername">Tree</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] scales, <span class="ckdoc_typename ckdoc_type_primitive">int</span>[] offsets)</p>
+<p class="member_description">Initialize a tree using arrays of MIDI numbers and a map of offsets (e.g. [ "a": 2, "b": -1 ]).</p>
+</div>
+</div>
+<h3 class="class_section_header">scale functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Scale</span>[] <span class="membername">scales</span>()</p>
+<p class="member_description">Get the scales of the tree as an array of objects.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Scale</span>[] <span class="membername">scales</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span> scales)</p>
+<p class="member_description">Update the scales of the tree by inputting a new string.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Scale</span>[] <span class="membername">scales</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[][] scales)</p>
+<p class="member_description">Update the scales of the tree by inputting new arrays of MIDI numbers.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">printPitches</span>()</p>
+<p class="member_description">Print the pitches of each scale in the tree.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">printNotes</span>()</p>
+<p class="member_description">Print the notes of each scale in the tree.</p>
+</div>
+</div>
+<h3 class="class_section_header">offset functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">offsets</span>()</p>
+<p class="member_description">Get the offsets of the tree as an associative array (e.g. [ "a": 4, "b": -2 ]).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">offsets</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] offsets)</p>
+<p class="member_description">Set the offsets of the tree using an associative array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">offsets</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span> input)</p>
+<p class="member_description">Set the offsets of the tree using an input string (e.g. "a4 + b-2").</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">addOffsets</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] offsets)</p>
+<p class="member_description">Add to the offsets of the tree using an associative array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">addOffsets</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span> input)</p>
+<p class="member_description">Add to the offsets of the tree using an input string (e.g. "a4 + b-2").</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">clearOffsets</span>()</p>
+<p class="member_description">Clear the offsets of the tree.</p>
+</div>
+<h3 class="class_section_header">chord functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">chord</span>()</p>
+<p class="member_description">Get the current MIDI chord stored in the tree.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">chord</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] chord)</p>
+<p class="member_description">Set the current MIDI chord stored in the tree.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">string</span> <span class="membername">detect</span>()</p>
+<p class="member_description">Return a string with the best guess of the name of the stored chord.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">string</span> <span class="membername">detect</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] chord)</p>
+<p class="member_description">Return a string with the best guess of the name of the given chord.</p>
+</div>
+<h3 class="class_section_header">transformation functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">transposeNote</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> midi)</p>
+<p class="member_description">Transpose a MIDI note based on the current configuration of scales and offsets.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">transposeNote</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> midi, <span class="ckdoc_typename ckdoc_type_primitive">string</span> offsets)</p>
+<p class="member_description">Update the offsets of the tree by string and transpose a MIDI note.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">transposeNote</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> midi, <span class="ckdoc_typename ckdoc_type_primitive">int</span>[] offsets)</p>
+<p class="member_description">Update the offsets of the tree by array and transpose a MIDI note.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">transform</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] midi)</p>
+<p class="member_description">Transpose an array of MIDI notes based on the current configuration of scales and offsets.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">transform</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] midi, <span class="ckdoc_typename ckdoc_type_primitive">string</span> offsets)</p>
+<p class="member_description">Update the offsets of the tree by string and transpose an array of MIDI notes.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">transform</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span>[] midi, <span class="ckdoc_typename ckdoc_type_primitive">int</span>[] offsets)</p>
+<p class="member_description">Update the offsets of the tree by array and transpose an array of MIDI notes.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">transform</span>()</p>
+<p class="member_description">Transpose the stored chord based on the current configuration of scales and offsets.</p>
+</div>
+</div>
+<h3 class="class_section_header">query functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span>[] <span class="membername">getClosestChord</span>()</p>
+<p class="member_description">Get the closest chord relative to the stored chord based on the current query.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Query</span> <span class="membername">query</span>()</p>
+<p class="member_description">Get the query of the tree as an object.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Query</span> <span class="membername">query</span>(<span class="ckdoc_typename ckdoc_type_object">Query</span> query)</p>
+<p class="member_description">Set the query of the tree using an object.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">string</span>[] <span class="membername">queryKeys</span>()</p>
+<p class="member_description">Get the array of keys (scales) in the query (e.g. ["a", "b"]).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">string</span>[] <span class="membername">queryKeys</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span>[] keys)</p>
+<p class="member_description">Update the keys in the query using an array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">string</span> <span class="membername">queryDirection</span>()</p>
+<p class="member_description">Get the direction of the query ("up", "down", or "any").</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">string</span> <span class="membername">queryDirection</span>(<span class="ckdoc_typename ckdoc_type_primitive">string</span> direction)</p>
+<p class="member_description">Update the direction of the query.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">querySpread</span>()</p>
+<p class="member_description">Get the spread of the query (i.e. search for offsets between -N and +N).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">querySpread</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> spread)</p>
+<p class="member_description">Update the spread of the query.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">queryIndex</span>()</p>
+<p class="member_description">Get the (0-based) index of the query (i.e. select the nth best result).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">queryIndex</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> index)</p>
+<p class="member_description">Update the index of the query.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">queryDegree</span>()</p>
+<p class="member_description">Get the degree of the query (if n != 0, the first scale must be offset by n-1).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">queryDegree</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> index)</p>
+<p class="member_description">Update the degree of the query.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">queryDegree</span>()</p>
+<p class="member_description">Get the degree of the query (if n != 0, the first scale must be offset by n-1).</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="Event" /><div class="class">
+<h2 class="class_title" name="Event">Event</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">A mechanism for precise synchronization across shreds.<p>
+<h3 class="class_section_header">examples</h3><div class="examples"><ul>
+<li><a target="_blank" href="../examples/event/broadcast.ck">event/broadcast.ck</a></li>
+<li><a target="_blank" href="../examples/event/signal.ck">event/signal.ck</a></li>
+<li><a target="_blank" href="../examples/event/signal4.ck">event/signal4.ck</a></li>
+<li><a target="_blank" href="../examples/event/event-extend.ck">event/event-extend.ck</a></li>
+<li><a target="_blank" href="../examples/event/event-extend2.ck">event/event-extend2.ck</a></li>
+<li><a target="_blank" href="../examples/event/event-x-bpm-1.ck">event/event-x-bpm-1.ck</a></li>
+<li><a target="_blank" href="../examples/event/event-x-bpm-2.ck">event/event-x-bpm-2.ck</a></li>
+</ul></div>
+<h3 class="class_section_header">constructors</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="membername">Event</span>()</p>
+<p class="member_description">Default constructor for Event.</p>
+</div>
+</div>
+<h3 class="class_section_header">member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">broadcast</span>()</p>
+<p class="member_description">Signal all shreds that are waiting on this event.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">can_wait</span>()</p>
+<p class="member_description">Can the event can be waited on? (internal) used by virtual machine for synchronization.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">signal</span>()</p>
+<p class="member_description">Signal one shred that is waiting on this event.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">waiting_on</span>()</p>
+<p class="member_description">(internal) used by virtual machine to be notified when a shred starts waiting on this Event.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="Shred" /><div class="class">
+<h2 class="class_title" name="Shred">Shred</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">A strongly-timed ChucK thread of execution.<p>
+<h3 class="class_section_header">examples</h3><div class="examples"><ul>
+<li><a target="_blank" href="../examples/shred/spork.ck">shred/spork.ck</a></li>
+<li><a target="_blank" href="../examples/shred/spork2.ck">shred/spork2.ck</a></li>
+<li><a target="_blank" href="../examples/shred/spork2-exit.ck">shred/spork2-exit.ck</a></li>
+<li><a target="_blank" href="../examples/shred/spork2-remove.ck">shred/spork2-remove.ck</a></li>
+<li><a target="_blank" href="../examples/shred/powerup.ck">shred/powerup.ck</a></li>
+<li><a target="_blank" href="../examples/event/broadcast.ck">event/broadcast.ck</a></li>
+<li><a target="_blank" href="../examples/event/signal.ck">event/signal.ck</a></li>
+<li><a target="_blank" href="../examples/event/signal4.ck">event/signal4.ck</a></li>
+<li><a target="_blank" href="../examples/shred/parent.ck">shred/parent.ck</a></li>
+<li><a target="_blank" href="../examples/shred/ancestor.ck">shred/ancestor.ck</a></li>
+</ul></div>
+<h3 class="class_section_header">constructors</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="membername">Shred</span>()</p>
+<p class="member_description">Default constructor for Shred.</p>
+</div>
+</div>
+<h3 class="class_section_header">member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Shred</span> <span class="membername">ancestor</span>()</p>
+<p class="member_description">Get the calling shred's "ancestor" shred (i.e., the top-level shred). Returns itself if the calling shred is the top-level shred. (Related: see Shred.parent())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">arg</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> index)</p>
+<p class="member_description">Get the Shred argument at the specified index.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">args</span>()</p>
+<p class="member_description">Get the number of arguments provided to the Shred.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">childMemSize</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> sizeInBytes)</p>
+<p class="member_description">Set size hint of per-shred call stack ("mem") for children shreds subsequently sporked from the calling shred (NOTE this size hint does not affect the calling shred--only its descendants); if sizeInBytes <= 0, the size hint is set to the VM default. (FYI This is an arcane functionality that most programmers never need to worry about. Advanced usage: set size hint to small values (e.g., 1K) to support A LOT (e.g., >10000) of simultaneous shreds; set size hint to large values (e.g., >65K) to spork functions with extremely deep recursion, or to support A LOT (>10000) of declared local variables. Use with care.)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">childMemSize</span>()</p>
+<p class="member_description">Get the memory stack size hint (in bytes) for shreds sporked from this one.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">childRegSize</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> sizeInBytes)</p>
+<p class="member_description">Set size hint of per-shred operand stack ("reg") for children shreds subsequently sporked from the calling shred (NOTE this size hint does not affect the calling shred--only its descendants); if sizeInBytes <= 0, the size hint is set to the VM default. (FYI This is an arcane functionality that most programmers never need to worry about. Advanced usage: set size hint to small values (e.g., 256 bytes) to support A LOT (>10000) of simultaneous shreds; set size hint to large values (e.g., >20K) to spork functions with extremely lengthy (>10000) statements, including array initializer lists. Use with care.)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">childRegSize</span>()</p>
+<p class="member_description">Get the operand stack size hint (in bytes) for shreds sporked from this one.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">dir</span>()</p>
+<p class="member_description">Get the enclosing directory of the source file from which this Shred's code is derived (same as .sourceDir()).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">dir</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> levelsUp)</p>
+<p class="member_description">Get the enclosing directory, the specified number of parent directories up.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">done</span>()</p>
+<p class="member_description">Has the Shred reached the end of its execution?</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">exit</span>()</p>
+<p class="member_description">Halt the shred's operation and remove it from the virtual machine.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">id</span>()</p>
+<p class="member_description">Get the unique numeric id of the Shred.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">memSP</span>()</p>
+<p class="member_description">Get the calling shred's current memory/call stack pointer; useful for debugging, general information, or amusement.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Shred</span> <span class="membername">parent</span>()</p>
+<p class="member_description">Get the calling shred's parent shred (i.e., the shred that sporked the calling shred). Returns null if there is no parent Shred. (Related: see Shred.ancestor())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">path</span>()</p>
+<p class="member_description">Get the path of the source file from which this Shred's code is derived (same as .sourcePath()).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">pc</span>()</p>
+<p class="member_description">Get the calling shred's current program counter (CP); useful for debugging, general information, or amusement.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">regSP</span>()</p>
+<p class="member_description">Get the calling shred's current register/operand stack pointer; useful for debugging, general information, or amusement.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">running</span>()</p>
+<p class="member_description">Is the Shred currently actively running in the VM?</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">sourceDir</span>()</p>
+<p class="member_description">Get the enclosing directory of the source file from which this Shred's code is derived (same as .dir()).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">sourcePath</span>()</p>
+<p class="member_description">Get the path of the source file from which this Shred's code is derived (same as .path()).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">yield</span>()</p>
+<p class="member_description">Cause the current Shred to temporarily suspend without advancing time, allowing other simultaneously schreduled shreds to run as needed. NOTE: yield() is equivalent to '0::second +=> now;'</p>
+</div>
+</div>
+<h3 class="class_section_header">static member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">Shred</span> <span class="membername">fromId</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> id)</p>
+<p class="member_description">Get Shred corresponding to a Shred ID.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="Math" /><div class="class">
+<h2 class="class_title" name="Math">Math</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">Math class library.<p>
+<h3 class="class_section_header">examples</h3><div class="examples"><ul>
+<li><a target="_blank" href="../examples/basic/blit2.ck">basic/blit2.ck</a></li>
+<li><a target="_blank" href="../examples/stk/mand-o-matic.ck">stk/mand-o-matic.ck</a></li>
+<li><a target="_blank" href="../examples/math/randomize.ck">math/randomize.ck</a></li>
+<li><a target="_blank" href="../examples/math/maybe.ck">math/maybe.ck</a></li>
+<li><a target="_blank" href="../examples/math/int-dist.ck">math/int-dist.ck</a></li>
+<li><a target="_blank" href="../examples/math/map.ck">math/map.ck</a></li>
+</ul></div>
+<h3 class="class_section_header">static member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">abs</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> value)</p>
+<p class="member_description">Return absolute value of an integer value.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">acos</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute arccosine of x; result in [0, pi].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">asin</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute arcsine of x; result in [-pi/2, +pi/2].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">atan2</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> y, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute arc tangent of two variables (y/x).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">atan</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute arctangent of x; result in [-pi/2, +pi/2].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">ceil</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Return the smallest integer value (returned as float) not less than x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">clampf</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value, <span class="ckdoc_typename ckdoc_type_primitive">float</span> min, <span class="ckdoc_typename ckdoc_type_primitive">float</span> max)</p>
+<p class="member_description">Clamp a float to range [min,max].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">clampi</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> value, <span class="ckdoc_typename ckdoc_type_primitive">int</span> min, <span class="ckdoc_typename ckdoc_type_primitive">int</span> max)</p>
+<p class="member_description">Clamp an integer to range [min,max].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">cos</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute cosine of x (measured in radians).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">cosh</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the hyperbolic cosine of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">cossim</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span><span class="typename">[]</span> a, <span class="ckdoc_typename ckdoc_type_primitive">float</span><span class="typename">[]</span> b)</p>
+<p class="member_description">Compute the cosine similarity between arrays a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">cossim</span>(<span class="ckdoc_typename ckdoc_type_primitive">vec3</span> a, <span class="ckdoc_typename ckdoc_type_primitive">vec3</span> b)</p>
+<p class="member_description">Compute the cosine similarity between 3D vectors a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">cossim</span>(<span class="ckdoc_typename ckdoc_type_primitive">vec4</span> a, <span class="ckdoc_typename ckdoc_type_primitive">vec4</span> b)</p>
+<p class="member_description">Compute the cosine similarity between 4D vectors a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">dbtopow</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert decibels (dB) to signal power ratio.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">dbtorms</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert decibles (dB) to linear amplitude.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">ensurePow2</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> x)</p>
+<p class="member_description">Return the smallest power-of-2 greater than or equal to the value of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">equal</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Return whether two floats are considered equal.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">euclidean</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span><span class="typename">[]</span> a, <span class="ckdoc_typename ckdoc_type_primitive">float</span><span class="typename">[]</span> b)</p>
+<p class="member_description">Compute the euclidean distance between arrays a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">euclidean</span>(<span class="ckdoc_typename ckdoc_type_primitive">vec2</span> a, <span class="ckdoc_typename ckdoc_type_primitive">vec2</span> b)</p>
+<p class="member_description">Compute the euclidean distance between 2D vectors a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">euclidean</span>(<span class="ckdoc_typename ckdoc_type_primitive">vec3</span> a, <span class="ckdoc_typename ckdoc_type_primitive">vec3</span> b)</p>
+<p class="member_description">Compute the euclidean distance between 3D vectors a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">euclidean</span>(<span class="ckdoc_typename ckdoc_type_primitive">vec4</span> a, <span class="ckdoc_typename ckdoc_type_primitive">vec4</span> b)</p>
+<p class="member_description">Compute the euclidean distance between 4D vectors a and b.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">exp2</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute 2^x, the base-2 exponential of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">exp</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute e^x, the base-e exponential of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">fabs</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Return absolute value of a floating point value.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">floor</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Return the largest integer value (returned as float) not greater than x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">fmod</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Compute the floating-point remainder of x / y.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">ftom</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert frequency (Hz) to MIDI note number space.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">gauss</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> mean, <span class="ckdoc_typename ckdoc_type_primitive">float</span> sd)</p>
+<p class="member_description">Compute gaussian function at x, given mean and SD.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">hypot</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Compute the euclidean distance sqrt(x*x+y*y).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">im</span>(<span class="ckdoc_typename ckdoc_type_primitive">complex</span> v)</p>
+<p class="member_description">Return the imaginary component of complex value v.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">isinf</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Return true if x is infinity, else return false.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">isnan</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Return true if x is not a number, else return false.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">log10</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the logarithm of x to base 10.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">log2</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the logarithm of x to base 2.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">log</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the natural logarithm of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">mag</span>(<span class="ckdoc_typename ckdoc_type_primitive">polar</span> v)</p>
+<p class="member_description">Return the magnitude component of polar value v.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">map2</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x1, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y1, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x2, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y2)</p>
+<p class="member_description">Map 'value' from range [x1,y1] into range [x2,y2]; 'value' will be clamped to [x1,y1] if outside range. (see also: Math.map())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">map</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x1, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y1, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x2, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y2)</p>
+<p class="member_description">Map 'value' from range [x1,y1] into range [x2,y2]; 'value' can be outside range[x1,y1]. (see also: Math.map2())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">max</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> x, <span class="ckdoc_typename ckdoc_type_primitive">int</span> y)</p>
+<p class="member_description">Return the greater of x and y (integer).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">max</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Return the greater of x and y (float).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">min</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> x, <span class="ckdoc_typename ckdoc_type_primitive">int</span> y)</p>
+<p class="member_description">Return the lesser of x and y (int).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">min</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Return the lesser of x and y (float).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">mtof</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert a MIDI note number to frequency (Hz). Note that the input value is of type float and supports fractional note numbers.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">nextpow2</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> x)</p>
+<p class="member_description">Compute the smallest power-of-2 greater than x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">phase</span>(<span class="ckdoc_typename ckdoc_type_primitive">polar</span> v)</p>
+<p class="member_description">Return the phase component of polar value v.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">pow</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Compute x raised to the y-th power.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">powtodb</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert signal power ratio to decibels (dB).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">ptor</span>(<span class="ckdoc_typename ckdoc_type_primitive">polar</span><span class="typename">[]</span> from, <span class="ckdoc_typename ckdoc_type_primitive">complex</span><span class="typename">[]</span> to)</p>
+<p class="member_description">Convert polar values to complex values; returns number of values converted.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">random2</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> min, <span class="ckdoc_typename ckdoc_type_primitive">int</span> max)</p>
+<p class="member_description">Return successive pseudo-random numbers in the range [min, max].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">random2f</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> min, <span class="ckdoc_typename ckdoc_type_primitive">float</span> max)</p>
+<p class="member_description">Return successive pseudo-random floating-point numbers in the range [min, max].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">random</span>()</p>
+<p class="member_description">Return successive pseudo-random integer numbers in the range [0, Math.RANDOM_MAX]].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">randomf</span>()</p>
+<p class="member_description">Return successive pseudo-random floating-point numbers in the range [0,1].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">randomize</span>()</p>
+<p class="member_description">Randomize the seed of the random number generator (RNG), using an non-deterministic mechanism. Whereas srandom() explicitly seeds the RNG and will produce a deterministic sequence of pseudo-random numbers, randomize() "shakes things up" and causes RNG to start generating from a practically unpredicable seed. The quality of randomize() depends on the underlying implementation.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">re</span>(<span class="ckdoc_typename ckdoc_type_primitive">complex</span> v)</p>
+<p class="member_description">Return the real component of complex value v.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">remainder</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y)</p>
+<p class="member_description">Compute the value r such that r=x-n*y, where n is the integer nearest the exact value of x / y. If there are two integers closest to x / y, n shall be the even one. If r is zero, it is given the same sign as x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">remap</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x1, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y1, <span class="ckdoc_typename ckdoc_type_primitive">float</span> x2, <span class="ckdoc_typename ckdoc_type_primitive">float</span> y2)</p>
+<p class="member_description">Same as Math.map2().</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">rmstodb</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert linear amplitude to decibels (dB).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">round</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Return the integer value (returned as float) nearest to x (rounding halfway cases away from zero).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rtop</span>(<span class="ckdoc_typename ckdoc_type_primitive">complex</span><span class="typename">[]</span> from, <span class="ckdoc_typename ckdoc_type_primitive">polar</span><span class="typename">[]</span> to)</p>
+<p class="member_description">Convert complex values to polar values; returns number of values converted.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">sgn</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Return sign of 'value' as -1.0 (negative), 0.0, or 1.0 (positive).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">sin</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute sine of x (measured in radians).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">sinh</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the hyperbolic sine of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">sqrt</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the non-negative square root of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">srandom</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> seed)</p>
+<p class="member_description">Seed the random number generator (RNG). Different seeds will generate very different sequences of random numbers even if the seeds are close together. Alternatively, a deterministic sequence of pseudo-random numbers can repeatably generated by setting the same seed.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">tan</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute tangent of x (measured in radians).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">tanh</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Compute the hyperbolic tangent of x.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">trunc</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> x)</p>
+<p class="member_description">Return the integer value nearest to but no greater in magnitude than x.</p>
+</div>
+</div>
+<h3 class="class_section_header">static member variables</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">e</span></p><p class="member_description">Euler's number; base of the natural logarithm.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">E</span></p><p class="member_description">Euler's number; base of the natural logarithm.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">FLOAT_MAX</span></p><p class="member_description">Largest representable floating-point value.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">FLOAT_MIN_MAG</span></p><p class="member_description">Smallest representable non-negative floating-point value.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">complex</span> <span class="membername">i</span></p><p class="member_description">The complex number sqrt(-1).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">complex</span> <span class="membername">I</span></p><p class="member_description">The complex number sqrt(-1).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">INFINITY</span></p><p class="member_description">Like, infinity.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">INT_MAX</span></p><p class="member_description">Largest representable integer value.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">complex</span> <span class="membername">j</span></p><p class="member_description">The complex number sqrt(-1).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">complex</span> <span class="membername">J</span></p><p class="member_description">The complex number sqrt(-1).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">pi</span></p><p class="member_description">An approximation of pi. (Same as global keyword 'pi'.)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">PI</span></p><p class="member_description">An approximation of pi. (Same as global keyword 'pi'.)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">RANDOM_MAX</span></p><p class="member_description">The largest possible value returned by random().</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">two_pi</span></p><p class="member_description">An approximation of 2*pi.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">TWO_PI</span></p><p class="member_description">An approximation of 2*pi.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="Machine" /><div class="class">
+<h2 class="class_title" name="Machine">Machine</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">Machine is the runtime interface to the ChucK Virtual Machine (Ck.VM or simply VM). This interface can be used to manage shreds, evaluate code, set log levels, etc. Machine's shred commands (add, replace, remove, etc.) are similar to the on-the-fly programming commands, except these are invoked from within a ChucK program, and benefit from ChucK's strongly-timed mechanics.<p>
+<h3 class="class_section_header">examples</h3><div class="examples"><ul>
+<li><a target="_blank" href="../examples/machine/eval.ck">machine/eval.ck</a></li>
+<li><a target="_blank" href="../examples/machine/eval-global.ck">machine/eval-global.ck</a></li>
+<li><a target="_blank" href="../examples/machine/intsize.ck">machine/intsize.ck</a></li>
+<li><a target="_blank" href="../examples/machine/is-realtime.ck">machine/is-realtime.ck</a></li>
+<li><a target="_blank" href="../examples/machine/machine-help.ck">machine/machine-help.ck</a></li>
+<li><a target="_blank" href="../examples/machine/machine-shred.ck">machine/machine-shred.ck</a></li>
+<li><a target="_blank" href="../examples/machine/version.ck">machine/version.ck</a></li>
+<li><a target="_blank" href="../examples/book/digital-artists/chapter9/DrumMachine">book/digital-artists/chapter9/DrumMachine</a></li>
+<li><a target="_blank" href="../examples/book/digital-artists/chapter9/SmartMandolin/initialize.ck">book/digital-artists/chapter9/SmartMandolin/initialize.ck</a></li>
+</ul></div>
+<h3 class="class_section_header">static member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">add</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> path)</p>
+<p class="member_description">Compile and spork a new shred from file at 'path' into the VM; returns the new shred ID. It is possible to include arguments with the file being added, e.g., `Machine.add( "foo.ck:bar:3:5.0" )`.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">clearVM</span>()</p>
+<p class="member_description">Reset the type system, removing all user-defined types and all global variables; removes all shreds in the VM (including the shred calling this function); use with care.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">crash</span>()</p>
+<p class="member_description">Explicitly crash the virtual machine. The very last resort; or an emphatic gesture. Use with care.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">eval</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> code)</p>
+<p class="member_description">Evaluate a string as ChucK code, compile it and immediately spork it as a new independent shred, and automatically yield the current shred to give the new shred a chance to run, without advancing time.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">eval</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> code, <span class="ckdoc_typename ckdoc_type_object">string</span> args)</p>
+<p class="member_description">Evaluate a string as ChucK code, with arguments (bundled in 'args' as "ARG1:ARG2:...", compile it and immediately spork it as a new independent shred, and automatically yield the current shred to give the new shred a chance to run, without advancing time.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">eval</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> code, <span class="ckdoc_typename ckdoc_type_object">string</span> args, <span class="ckdoc_typename ckdoc_type_primitive">int</span> count)</p>
+<p class="member_description">Evaluate a string as ChucK code, with optional arguments (bundled in 'args' as "ARG1:ARG2:...", compile it and immediately spork 'count' independent shreds; and automatically yield the current shred to give all new shreds a chance to run, without advancing time.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">intsize</span>()</p>
+<p class="member_description">Return the bit size of an integer.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">loglevel</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> level)</p>
+<p class="member_description">Set log level
+       |- 0: NONE
+       |- 1: CORE
+       |- 2: SYSTEM
+       |- 3: HERALD
+       |- 4: WARNING
+       |- 5: INFO
+       |- 6: DEBUG
+       |- 7: FINE
+       |- 8: FINER
+       |- 9: FINEST
+       |- 10: ALL.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">loglevel</span>()</p>
+<p class="member_description">Get log level.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">numShreds</span>()</p>
+<p class="member_description">Get the number of shreds currently in the VM.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">printStatus</span>()</p>
+<p class="member_description">Print (to terminal or console) the current status of the VM.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">printTimeCheck</span>()</p>
+<p class="member_description">Print (to terminal or console) the current time information in the VM.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">realtime</span>()</p>
+<p class="member_description">Return true if the shred is in realtime mode, false if it's in silent mode (i.e. --silent is enabled)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">refcount</span>(<span class="ckdoc_typename ckdoc_type_object">Object</span> obj)</p>
+<p class="member_description">Get an object's current internal reference count; this is intended for testing or curiosity; NOTE: this function intentionally does not take into account any reference counting related to the calling of this function (normally all functions increments the reference count for objects passed as arguments and decrements upon returning)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">remove</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> id)</p>
+<p class="member_description">Remove shred from VM by shred ID (returned by Machine.add).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">removeAllShreds</span>()</p>
+<p class="member_description">Remove all shreds in the VM (including the shred calling this function).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">removeLastShred</span>()</p>
+<p class="member_description">Remove the most recently added shred in the VM (could be the shred calling this function); returns the ID of the removed shred.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">replace</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> id, <span class="ckdoc_typename ckdoc_type_object">string</span> path)</p>
+<p class="member_description">Replace shred with new shred from file. Returns new shred ID, or 0 on error. It is possible to include arguments, e.g., `Machine.replace( outID, "foo.ck:bar:3:5.0" )`.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">resetOperators</span>()</p>
+<p class="member_description">Reset operator overloading state to default startup state; removes all public @operator overloads; use with care.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">resetShredID</span>()</p>
+<p class="member_description">Reset shred IDs to 1 + the highest current shred ID in the VM; can be used as shred management to keep shred IDs low, after a lot of sporks; returns what the next shred ID would be.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span><span class="typename">[]</span> <span class="membername">shreds</span>()</p>
+<p class="member_description">Retrieve an array of active shred ids.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">silent</span>()</p>
+<p class="member_description">Return false if the shred is in realtime mode, true if it's in silent mode (i.e. --silent is enabled)</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">sp_mem</span>()</p>
+<p class="member_description">Get the calling shred's memory (aka "mem") stack pointer; intended for either debugging or curiosity.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">sp_reg</span>()</p>
+<p class="member_description">Get the calling shred's operand (aka "reg"/register) stack pointer; intended for either debugging or curiosity.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">status</span>()</p>
+<p class="member_description">Print the current status of the VM; legacy version of printStatus().</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">version</span>()</p>
+<p class="member_description">Return language and VM version string.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="Std" /><div class="class">
+<h2 class="class_title" name="Std">Std</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">A standard library in ChucK, which includes utility functions for random number generation, unit conversions, and absolute value.<p>
+<h3 class="class_section_header">static member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">abs</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> value)</p>
+<p class="member_description">Return absolute value of integer.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">atof</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> value)</p>
+<p class="member_description">Converts ascii (string) to floating point value (float).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">atoi</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> value)</p>
+<p class="member_description">Convert ascii (string) to integer (int).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">clamp</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> value, <span class="ckdoc_typename ckdoc_type_primitive">int</span> min, <span class="ckdoc_typename ckdoc_type_primitive">int</span> max)</p>
+<p class="member_description">Clamp integer to range [min, max].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">clampf</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value, <span class="ckdoc_typename ckdoc_type_primitive">float</span> min, <span class="ckdoc_typename ckdoc_type_primitive">float</span> max)</p>
+<p class="member_description">Clamp float to range [min, max].</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">dbtolin</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert decibels (dB) to linear amplitude.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">dbtopow</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert decibels (dB) to signal power ratio.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">dbtorms</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert decibels (dB) to rms.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">fabs</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Return absolute value of float.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">ftoa</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> f, <span class="ckdoc_typename ckdoc_type_primitive">int</span> precision)</p>
+<p class="member_description">Converts floating point value (float) to ascii (string) with specified precision (number of decimal digits).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">ftoi</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> f)</p>
+<p class="member_description">Convert float to integer.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">ftom</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert frequency (Hz) to MIDI note number space.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">getenv</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> key)</p>
+<p class="member_description">Get the value of an environment variable (e.g., PATH).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">getenv</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> key, <span class="ckdoc_typename ckdoc_type_object">string</span> default)</p>
+<p class="member_description">Get the value of an environment variable, returning the provided default if unset.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">itoa</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> i)</p>
+<p class="member_description">Converts integer (int) to ascii (string).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">lintodb</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert linear amplitude to decibels (dB).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">mtof</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert a MIDI note number to frequency (Hz). Note the input value is of type float (supports fractional note number). For reference, MIDI note number 60 is Middle C; each whole number is one semitone.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">powtodb</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert signal power ratio to decibels (dB).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rand2</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> min, <span class="ckdoc_typename ckdoc_type_primitive">int</span> max)</p>
+<p class="member_description">Generate a random integer in range [min, max]. (NOTE: this is deprecated; use Math.random2()).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">rand2f</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> min, <span class="ckdoc_typename ckdoc_type_primitive">float</span> max)</p>
+<p class="member_description">Generate random floating point number in the range [min, max]. (NOTE: this is deprecated; use Math.random2f())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rand</span>()</p>
+<p class="member_description">Generate a random integer between 0 and Std.RAND_MAX. (NOTE: this is deprecated; use Math.random()).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">randf</span>()</p>
+<p class="member_description">Generate random floating point number in the range [-1, 1]. (Note: this is deprecated; use Math.randomf())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span><span class="typename">[]</span> <span class="membername">range</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> stop)</p>
+<p class="member_description">Return array containing the range [0,stop).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span><span class="typename">[]</span> <span class="membername">range</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> start, <span class="ckdoc_typename ckdoc_type_primitive">int</span> stop)</p>
+<p class="member_description">Return array containing the range [start,stop).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span><span class="typename">[]</span> <span class="membername">range</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> start, <span class="ckdoc_typename ckdoc_type_primitive">int</span> stop, <span class="ckdoc_typename ckdoc_type_primitive">int</span> step)</p>
+<p class="member_description">Return array containing values from start up to (but not including) stop, hopping by step.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">rmstodb</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Convert rms to decibels (dB).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">scalef</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value, <span class="ckdoc_typename ckdoc_type_primitive">float</span> srcmin, <span class="ckdoc_typename ckdoc_type_primitive">float</span> srcmax, <span class="ckdoc_typename ckdoc_type_primitive">float</span> dstmin, <span class="ckdoc_typename ckdoc_type_primitive">float</span> dstmax)</p>
+<p class="member_description">Scale a float from source range to destination range.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">setenv</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> key, <span class="ckdoc_typename ckdoc_type_object">string</span> value)</p>
+<p class="member_description">Set the value of environment variable named 'key'</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">sgn</span>(<span class="ckdoc_typename ckdoc_type_primitive">float</span> value)</p>
+<p class="member_description">Get sign of value as -1 (negative), 0, or 1 (positive).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">srand</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> seed)</p>
+<p class="member_description">Seed the random number generator. Different seeds will likely generate different sequences of random numbers even if the seeds are close together; alternatively, a sequence of random numbers can be repeated by setting the same seed. (NOTE: this is deprecated; use Math.srandom())</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">system</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> cmd)</p>
+<p class="member_description">Pass a command to be executed in the shell (requires --caution-to-the-wind flag to be set).</p>
+</div>
+</div>
+<h3 class="class_section_header">static member variables</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">RAND_MAX</span></p><p class="member_description">The largest possible value returned by Std.rand().</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="string" /><div class="class">
+<h2 class="class_title" name="string">string</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">Textual data as a sequence of characters, along with functions for manipulating text.<p>
+<h3 class="class_section_header">examples</h3><div class="examples"><ul>
+<li><a target="_blank" href="../examples/string/strops.ck">string/strops.ck</a></li>
+<li><a target="_blank" href="../examples/string/strops2.ck">string/strops2.ck</a></li>
+<li><a target="_blank" href="../examples/string/replace.ck">string/replace.ck</a></li>
+<li><a target="_blank" href="../examples/string/token.ck">string/token.ck</a></li>
+<li><a target="_blank" href="../examples/string/escape.ck">string/escape.ck</a></li>
+<li><a target="_blank" href="../examples/string/tostr.ck">string/tostr.ck</a></li>
+</ul></div>
+<h3 class="class_section_header">constructors</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="membername">string</span>()</p>
+<p class="member_description">Default constructor for string.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="membername">string</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> str)</p>
+<p class="member_description">Construct a string as a copy of another string.</p>
+</div>
+</div>
+<h3 class="class_section_header">member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">appendChar</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> theChar)</p>
+<p class="member_description">Append a character by its ASCII code and return a reference to itself; same as using the << operator `STR << INT`.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">charAt</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> index)</p>
+<p class="member_description">Get a character at the specified index.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">erase</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> start, <span class="ckdoc_typename ckdoc_type_primitive">int</span> length)</p>
+<p class="member_description">Erase length characters of the string from start position.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">find</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> theChar)</p>
+<p class="member_description">Get the index of the first occurrence of theChar, or -1 if theChar is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">find</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> theChar, <span class="ckdoc_typename ckdoc_type_primitive">int</span> start)</p>
+<p class="member_description">Get the index of the first occurrence of theChar at or after the start position, or -1 if theChar is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">find</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> str)</p>
+<p class="member_description">Get the index of the first occurrence of str, or -1 if str is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">find</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> str, <span class="ckdoc_typename ckdoc_type_primitive">int</span> start)</p>
+<p class="member_description">Get the index of the first occurrence of str at or after the start position, or -1 if str is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">insert</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> position, <span class="ckdoc_typename ckdoc_type_object">string</span> str)</p>
+<p class="member_description">Insert a string at the specified position.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">length</span>()</p>
+<p class="member_description">Get the number of characters of the string.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">lower</span>()</p>
+<p class="member_description">Get a new string in which the uppercase characters of the original string have been converted to lowercase.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">ltrim</span>()</p>
+<p class="member_description">Get a new string in which leading whitespace has been removed.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">replace</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> position, <span class="ckdoc_typename ckdoc_type_object">string</span> str)</p>
+<p class="member_description">Replace characters from 'position' with contents of 'str'.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">replace</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> position, <span class="ckdoc_typename ckdoc_type_primitive">int</span> length, <span class="ckdoc_typename ckdoc_type_object">string</span> str)</p>
+<p class="member_description">Replace 'length' characters from 'position' with contents of 'str'.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">replace</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> from, <span class="ckdoc_typename ckdoc_type_object">string</span> to)</p>
+<p class="member_description">Replace all instances of 'from' in the string with 'to'.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rfind</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> theChar)</p>
+<p class="member_description">Get the index of the last occurrence of theChar, or -1 if theChar is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rfind</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> theChar, <span class="ckdoc_typename ckdoc_type_primitive">int</span> start)</p>
+<p class="member_description">Get the index of the last occurrence of theChar at or before the start position, or -1 if theChar is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rfind</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> str)</p>
+<p class="member_description">Get the index of the last occurrence of str, or -1 if str is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">rfind</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> str, <span class="ckdoc_typename ckdoc_type_primitive">int</span> start)</p>
+<p class="member_description">Get the index of the last occurrence of str at or before the start position, or -1 if str is not found.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">rtrim</span>()</p>
+<p class="member_description">Get a new string in which trailing whitespace has been removed.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">setCharAt</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> index, <span class="ckdoc_typename ckdoc_type_primitive">int</span> theChar)</p>
+<p class="member_description">Set the character at the specified index.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">substring</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> start)</p>
+<p class="member_description">Get a new string containing the substring from the start index to the end of the string.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">substring</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> start, <span class="ckdoc_typename ckdoc_type_primitive">int</span> length)</p>
+<p class="member_description">Get a new string containing the substring from the start index of the specified length.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">float</span> <span class="membername">toFloat</span>()</p>
+<p class="member_description">Attempt to convert the contents of the string to an float and return the result, or 0 if conversion failed.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">toInt</span>()</p>
+<p class="member_description">Attempt to convert the contents of the string to an integer and return the result, or 0 if conversion failed.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">toString</span>()</p>
+<p class="member_description">Return the reference of calling string.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">trim</span>()</p>
+<p class="member_description">Get a new string in which leading and trailing whitespace has been removed.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_object">string</span> <span class="membername">upper</span>()</p>
+<p class="member_description">Get a new string in which the lowercase characters of the original string have been converted to uppercase.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+<a name="@array" /><div class="class">
+<h2 class="class_title" name="@array">@array</h2>
+<h4><span class="class_inherits">inherits</span> : <a href="base.html#Object" class="ckdoc_typename ckdoc_type_object">Object</a> </h4>
+<p class="class_description">Storage construct for sequential data of the same type; can also be used as an associative map data structure; also can be used as a stack with << operator to append/push and popBack to pop.<p>
+<h3 class="class_section_header">examples</h3><div class="examples"><ul>
+<li><a target="_blank" href="../examples/array/array_append.ck">array/array_append.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_argument.ck">array/array_argument.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_assign.ck">array/array_assign.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_associative.ck">array/array_associative.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_capacity.ck">array/array_capacity.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_dynamic.ck">array/array_dynamic.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_erase.ck">array/array_erase.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_erase2.ck">array/array_erase2.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_mdim.ck">array/array_mdim.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_mmixed.ck">array/array_mmixed.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_negative.ck">array/array_negative.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_range.ck">array/array_range.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_resize.ck">array/array_resize.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_reverse.ck">array/array_reverse.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_shuffle.ck">array/array_shuffle.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_sort.ck">array/array_sort.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_storage.ck">array/array_storage.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_sub_assign.ck">array/array_sub_assign.ck</a></li>
+<li><a target="_blank" href="../examples/array/array_zero.ck">array/array_zero.ck</a></li>
+</ul></div>
+<h3 class="class_section_header">member functions</h3>
+<div class="members">
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">cap</span>()</p>
+<p class="member_description">(deprecated) For historical/compatibilty reasons, .cap() is always equal to .size(); instead of using .cap(), it is recommended to explicitly use .size() or .capacity().</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">capacity</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> val)</p>
+<p class="member_description">Ensure capacity of the array (number of addressable elements).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">capacity</span>()</p>
+<p class="member_description">Get current capacity of the array (number of addressable elements).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">clear</span>()</p>
+<p class="member_description">Clear the contents of the array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">erase</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> position)</p>
+<p class="member_description">Remove element at 'position' from the array (same as popOut(int)).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">erase</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> begin, <span class="ckdoc_typename ckdoc_type_primitive">int</span> end)</p>
+<p class="member_description">Remove element(s) in the range [begin,end).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">erase</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> key)</p>
+<p class="member_description">(map only) Erase all elements with the specified key.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">getKeys</span>(<span class="ckdoc_typename ckdoc_type_object">string</span><span class="typename">[]</span> keys)</p>
+<p class="member_description">Return all keys found in associative array in keys.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">isInMap</span>(<span class="ckdoc_typename ckdoc_type_object">string</span> key)</p>
+<p class="member_description">(map only) test if 'key' is in the map; (historical) this was renamed from .find() to avoid confusion with the vector part of array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">popBack</span>()</p>
+<p class="member_description">Remove the last element of the array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">popFront</span>()</p>
+<p class="member_description">Remove the first element of the array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">popOut</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> position)</p>
+<p class="member_description">Remove the element at 'position' from the array (same as erase(int)).</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">reset</span>()</p>
+<p class="member_description">Reset array size to 0, set capacity to (at least) 8.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">reverse</span>()</p>
+<p class="member_description">Reverses the array in-place.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">shuffle</span>()</p>
+<p class="member_description">Shuffle the contents of the array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">size</span>()</p>
+<p class="member_description">Get the number of elements in the array.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">int</span> <span class="membername">size</span>(<span class="ckdoc_typename ckdoc_type_primitive">int</span> newSize)</p>
+<p class="member_description">Set the size of the array. If the new size is less than the current size, elements will be deleted from the end; if the new size is larger than the current size, 0 or null elements will be added to the end.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">sort</span>()</p>
+<p class="member_description">Sort the contents of the array in ascending order.</p>
+</div>
+<div class="member">
+<p class="member_declaration"><span class="ckdoc_typename ckdoc_type_primitive">void</span> <span class="membername">zero</span>()</p>
+<p class="member_description">Zero out the contents of the array; size is unchanged.</p>
+</div>
+</div>
+<p class="top_link">[ <a href="#top">top</a> ]</p>
+</div>
+<hr />
+</div>
+</div>
+</body>
+</html>

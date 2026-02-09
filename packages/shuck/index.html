@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ccrma/webchuck-ide@main/cdn/ace/ace.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ccrma/webchuck-ide@main/cdn/ace/editor.js"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+      * {
+        /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; */
+        font-family: Nunito;
+      }
+      hr {
+        color: lightgray;
+      }
+      .function {
+        color: rgb(248, 158, 172);
+        font-weight: 400;
+      }
+      .code {
+        color: #40b080;
+      }
+    </style>
+  </head>
+  <body>
+    <base target="_blank"/>
+    <main>
+      <div class="flex flex-col gap-4 p-4 font-light max-w-[1000px] mx-auto justify-center">
+        <div>
+          <div class="flex justify-center items-center gap-4 mb-2 mx-auto">
+            <img src="logo.png" class="size-24"/>
+            <h1 class="text-3xl font-semibold">SHucK ~> Structured Harmony in ChucK</h1>
+          </div>
+          <hr />
+        </div>
+        <div class="text-base">
+          <p><strong class="font-bold">SHucK</strong> is a toolkit built in ChucK for developers to easily implement scales, chords, and voice leadings.</p>
+          <p class="mb-2">SHucK is based on <a class="text-blue-400 hover:underline" href="https://musicalcalculator.vercel.app">Harmonia</a>, the scientific musical calculator created by Brendan Zelikman.</p>
+          <hr />
+        </div>
+        <h1 class="font-bold text-2xl">Installing SHucK</h1>
+        <p>To install SHucK, use Chump (for now, use this <a class="text-blue-400 hover:underline" download href="shuck.zip">secret download link</a> and reference types/tree.ck):</p>
+        <p class="bg-[#f5f2f0] p-2 border border-slate-50/50">chump install shuck</p>
+        <hr/>
+        <h1 class="font-bold text-2xl">What is Structured Harmony?</h1>
+        <h2>Structured Harmony is a <i>fancy term</i> that refers to the hierarchical organization of scales, chords, subscales, subchords, and so on.</h2>
+        <h1 class="font-bold text-2xl">Why use Structured Harmony?</h1>
+        <h2>You are probably using it already!
+        Most Western music is based on hierarchical relationships between notes.
+        <br/>For example, it is common to think of a C major chord nested within a C major scale,
+        that itself might be nested within a chromatic scale.
+        </h2>
+        <h1 class="font-bold text-2xl">What are you talking about?</h1>
+        <h2>Tough start, I know. Consider this example:</h2>
+        <img src="images/example2.png" class="h-20 w-fit"/>
+        <h2>This figure is deceptively complex but decomposable into three layers of structure.</h2>
+        <h2 class="ml-4"><strong>Layer 1: C major chord.</strong><br/>Notes 2-4 (E,G,C) are consecutive steps derived from a C major chord.</h2>
+        <h2 class="ml-4"><strong>Layer 2: C major scale.</strong><br/>Note 5 (D) takes the preceding chord tone (C) and moves it one step up the C major scale.</h2>
+        <h2 class="ml-4"><strong>Layer 3: Chromatic scale.</strong><br/>Note 1 (D#) takes the succeeding chord tone (E) and moves it one step down the chromatic scale.</h2>
+
+        <h1 class="font-bold text-2xl">...And?</h1>
+        <h2>We don't have good ways of representing these kinds of structures! A common development of this figure might be this:</h2>
+        
+        <div class="flex items-center gap-3">        
+        <img src="images/example2.png" class="h-20 w-fit"/><div>-></div>
+        <img src="images/example3.png" class="h-20 w-fit"/></div>
+        <h2>Without the right framework, this transformation is incomprehensible:</h2>
+        <h2 class="italic text-slate-500 ml-4">"Move D# up 3 steps, E up 3 steps, G up 5 steps, C up 4 steps, and D up 3 steps"</h2>
+        <h2>Tell a computer to move a D# along a C major scale and its motherboard will combust.</h2>
+        <div class="flex items-center gap-3">        
+        <img src="images/example5.png" class="h-20 w-fit"/><div>-></div>
+        Wrong, MuseScore, wrong!</div>
+        <h2>With the framework of structured harmony, this transformation is logical:</h2>
+        <h2 class="italic text-slate-500 ml-4">"Move the (implicit) C major chord up one inversion"</h2>
+        <h2>If you are a musician, you can probably figure this out intuitively! If you are a computer, you probably can't!</h2>
+        <h2>Most software is not designed to distinguish between more than one scale at a time, which musicians can and often do.</h2>
+        <h1 class="font-bold text-2xl">...Okay?</h1>
+        <h2>As another example, consider this chord progression:</h2>
+        <img src="images/example4.png" class="h-20 w-fit"/>
+        <h2>If you are programming this music, you would probably input every single chord one by one.</h2>
+        <h2 class="italic text-slate-500 ml-4">Okay, "C E G", then "C E A", then "C F A", then "D F A", then "D F B", then, umm..., "D G B", then I think..?"</h2>
+        <h2>Even though the notes move in a clear pattern, we usually have to rely on manual input which is prone to tedium and error.</h2>
+        <h2>If you want to change the formula later, you have to change every single chord. Good luck with making revisions.</h2>
+        <h2>With structured harmony, the formulation is trivial:</h2>
+        <h2 class="italic text-slate-400 ml-4">"Move the chord up one inversion and down two steps."</h2></h2>
+        <h2>Rather than individually defining each note, we can write an initial chord and a musical function that repeats.</h2>
+        <h1 class="font-bold text-2xl">It's that easy?</h1>
+        <h2>Yes, it's that easy! With our framework, we could find the hundredth chord in the sequence without breaking a sweat.</h2>
+        <h2>This allows us to focus more on creative exploration and revision without getting lost in the weeds of the calculations.</h2>
+        <h1 class="font-bold text-2xl">Is this AI?!</h1>
+        <h2>No, this is math! Musicians deserve to have their own calculators too! And so do ChucK developers!</h2>
+        <hr />
+        <h1 class="font-bold text-2xl">Introducing SHucK</h1>
+        <h1 class="font-bold text-xl">Creating Trees</h1>
+        <h2>The foundation of SHucK is the Tree, a class that can represent a nested configuration of scales.
+        <div class="mt-4 ml-4 bg-[#f5f2f0] p-2">
+          <h2>Tree tree("major > maj7 > maj");</h2>
+          <h2 class="text-slate-500">// is equivalent to: Tree tree("C,D,E,F,G,A,B > C,E,G,B > C,E,G");</h2>
+          <h2 class="text-slate-500">// is equivalent to: Tree tree([[0,2,4,5,7,9,11], [0,4,7,11], [0,4,7]]);</h2>
+        </div>
+        <h2>The scales of a tree can be inputted by name, pitch class, or MIDI number.</h2>
+        <h1 class="font-bold text-xl">Creating Poses</h1>
+        <h2>Trees can be "posed" to move notes along multiple scales at a time.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2>tree.pose("a1"); <span class="italic text-slate-500 ml-15">// Move 1 step up the first scale of the tree</span></h2>
+          <h2>tree.pose("a-1"); <span class="italic text-slate-500 ml-13">// Move 1 step down the first scale of the tree</span></h2>
+          <h2>tree.pose("a1 + b-1"); <span class="italic text-slate-500 ml-4">// Move 1 step up the first scale and 1 step down the second scale</span></h2>
+          <h2>tree.pose("t12 + y-1"); <span class="italic text-slate-500 ml-2">// Move 12 semitones up and one octave down</span></h2>
+        </div>
+        <h2>Concretely, the scales of a tree can be referenced in order by letters a-z, with t and y reserved for semitones and octaves, respectively.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2>tree.pose("a4 + b-3 + c1 + t5 + y-1"); <span class="italic text-slate-500 ml-4">// Crazy musical operation!</span></h2>
+        </div>
+        <h2>Poses can be directly set, added, and cleared.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2>tree.pose("a1 + b-1"); <span class="italic text-slate-500 ml-4">// Sets the pose to "a1 + b-1"</span></h2>
+          <h2>tree.add("a1"); <span class="ml-16 italic text-slate-500">// Sets the pose to "a2 + b-1"</span></h2>
+          <h2>tree.clear(); <span class="ml-22 italic text-slate-500">// Sets the pose to ""</span></h2>
+        </div>
+        <h1 class="font-bold text-xl">Transforming Notes</h1>
+        <h2>After setting a pose, trees can be used to transform an array of input notes, returned as MIDI and printed here as pitches for clarity.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2 class="italic text-slate-500">// Set up tree and pose</h2>
+          <h2>Tree tree("C, D, E, F, G, A, B > C, E, G");</h2>
+          <h2>tree.pose("a-3 + b1");</h2><br/>
+          <h2 class="italic text-slate-500">// Transform notes</h2>
+          <h2>tree.transform([C4, E4, G4]); <span class="ml-4 italic text-slate-500">// Returns [B3, D4, G4]</span></h2>
+          <h2>tree.transform([E4, G4, C5]); <span class="ml-4 italic text-slate-500">// Returns [D4, G4, B4]</span></h2>
+        </div>
+          <h2>Here is the melody and development from earlier, recreated with a single pose.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2 class="italic text-slate-500">// Set up tree and pose</h2>
+          <h2>Tree tree("C, D, E, F, G, A, B > C, E, G");</h2>
+          <h2>tree.pose("b1");</h2><br/>
+          <h2 class="italic text-slate-500">// Transform notes</h2>
+          <h2>tree.transform([D#4, E4, G4, C5, D5]); <span class="ml-4 italic text-slate-500">// Returns [F#4, G4, C5, E5, F5]</span></h2>
+        </div>
+        <h1 class="font-bold text-xl">Transforming In-Place</h1>
+        <h2>Trees can also store a "chord" to keep track of notes and accumulate transformations over time.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2 class="italic text-slate-500">// Set up tree, pose, and chord</h2>
+          <h2>Tree tree("major > maj");</h2>
+          <h2>tree.pose("a-3 + b1");</h2>
+          <h2>tree.chord([C4, E4, G4]);</h2><br/>
+          <h2 class="italic text-slate-500">// Apply poses iteratively (1 signals in-place)</h2>
+          <h2>tree.transform(1); <span class="ml-3 italic text-slate-500">// Updates chord to [B3, D4, G4]</span></h2>
+          <h2>tree.transform(1); <span class="ml-2 italic text-slate-500">// Updates chord to [A3, D4, F4]</span></h2>
+          <h2>tree.detect(); <span class="ml-10 italic text-slate-500">// Returns "D min6/4" as the best guess of the chord</span></h2>
+        </div>
+        <h1 class="font-bold text-xl">Querying a Transformation</h1>
+        <h2>Trees can be queried to find a specific voice leading for a chord based on a set of conditions.</h2>
+        <div class="ml-4 bg-[#f5f2f0] p-2">
+          <h2 class="italic text-slate-500">// Set up tree and chord</h2>
+          <h2>Tree tree("C, D, E, F, G, A, B > C, E, G");</h2>
+          <h2>tree.chord([C4, E4, G4]);</h2>
+          <br/><h2 class="italic text-slate-500">// Set up the conditions of the search</h2>
+          <h2>tree.queryKeys(["a", "b"]); <span class="ml-3 italic text-slate-500">// Search for transformations along the first two scales</span></h2>
+          <h2>tree.queryDirection("up"); <span class="ml-2 italic text-slate-500">// Search for transformations that have a net upward direction</span></h2>
+          <h2>tree.querySpread(5); <span class="ml-10 italic text-slate-500">// Search for transformations with at most 5 steps along any scale</span></h2>
+          <h2>tree.queryIndex(0); <span class="ml-12 italic text-slate-500">// Search for the first closest transformation (0-indexed ranking)</span></h2>
+          <br/><h2 class="italic text-slate-500">// Search for the chord satisfying the conditions:</h2>
+          <h2>tree.queryChord(); <span class="ml-4 italic text-slate-500">// Returns [C4, E4, A4] in this case</h2>
+          <br/><h2 class="italic text-slate-500">// Alternatively, search for the pose that would produce the chord:</h2>
+          <h2>tree.queryPose(); <span class="ml-4 italic text-slate-500">// Returns "a-2 + b1" in this case</span></h2>
+        </div>
+        <hr />
+        <h1 class="font-bold text-xl">Learning ShucK</h1>
+        <h2>The best way to learn how to use ShucK is to familiarize yourself with <a href="https://musicalcalculator.vercel.app" class="text-blue-400 hover:underline">Harmonia</a>, the inspiration of this project.</h2>
+        <h2>Harmonia treats each scale as a separate track on the DAW and allows you to schedule poses as clips in the timeline.</h2>
+        <h2>Alternatively, do a deep dive into the work of <a href="https://dmitri.mycpanel.princeton.edu/" class="text-blue-400 hover:underline">Dmitri Tymoczko</a>, the composer and theorist who inspired Harmonia.</h2>
+      </div>
+    </main>
+  </body>
+</html>
