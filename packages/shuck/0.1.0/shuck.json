@@ -2,7 +2,7 @@
     "arch": "all",
     "files": [
         {
-            "checksum": "d1c460030bfe97481d793b4a4ebb6d1499886f7982122115d76b487d125fd45f",
+            "checksum": "90c81c1b1a2b06897663775504817580502f6aa44206a0a211662a5553e22528",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~brendan/shuck/shuck.zip"

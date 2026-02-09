@@ -2,7 +2,7 @@
     "arch": "all",
     "files": [
         {
-            "checksum": "195242b8ff31b5875e00c03ee118281ac05742083207c4fa62a38a6d61606ac4",
+            "checksum": "baf865d421fd53cd16700d5a851ee27badc493619d1577fb587b4211e5a3e1b3",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~brendan/chudel/chudel.zip"
