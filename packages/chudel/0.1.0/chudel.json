@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "95e897d752fb11cd944b67e1ccfd466d61b8f8dcdaba43a1e2750121a94977db",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~brendan/chudel/chudel.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 5
+    },
+    "os": "any",
+    "version": "0.1.0"
+}

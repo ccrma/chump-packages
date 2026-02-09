@@ -1,0 +1,16 @@
+{
+    "authors": [
+        "Brendan Zelikman"
+    ],
+    "description": "A ChucKian port of Strudel.",
+    "homepage": "https://ccrma.stanford.edu/~brendan/chudel",
+    "keywords": [
+        "live-code",
+        "live code",
+        "strudel",
+        "tidal cycles"
+    ],
+    "license": "MIT",
+    "name": "chudel",
+    "respository": ""
+}
