@@ -1,0 +1,18 @@
+{
+    "authors": [
+        "Brendan Zelikman"
+    ],
+    "description": "Structured Harmony in ChucK.",
+    "homepage": "https://ccrma.stanford.edu/~brendan/shuck",
+    "keywords": [
+        "scales",
+        "chords",
+        "voice leading",
+        "structured",
+        "harmony",
+        "tonality"
+    ],
+    "license": "MIT",
+    "name": "shuck",
+    "repository": ""
+}
