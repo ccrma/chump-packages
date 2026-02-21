@@ -1,3 +1,4 @@
+#!/bin/bash
 # deploy the manifest.json to CCRMA servers
 
 # check if jq is installed
