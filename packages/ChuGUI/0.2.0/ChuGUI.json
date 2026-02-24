@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "de4bdb65e82be0b8b26e0195ca6cf00d4d07fd3c94a9a70743a5811722ed5cbb",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~hoangben/ChuGUI/releases/0.2.0/ChuGUI.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "any",
+    "version": "0.2.0"
+}
