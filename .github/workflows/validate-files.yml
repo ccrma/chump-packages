@@ -6,10 +6,10 @@ on:
   workflow_dispatch:       # Allows manual triggering
   pull_request:
     branches:
-	- main
+      - main
     paths:
-        - "packages/**"
-        - "validate_files.py"
+      - "packages/**"
+      - "validate_files.py"
 
 jobs:
   run-script:
