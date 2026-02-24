@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "0 0 * * *"   # Runs every day at 00:00 UTC
   workflow_dispatch:       # Allows manual triggering
+  pull_request:
+    branches:
+	- main
+    paths:
+        - "packages/**"
+        - "validate_files.py"
 
 jobs:
   run-script:
