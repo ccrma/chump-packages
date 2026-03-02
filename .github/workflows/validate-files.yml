@@ -1,0 +1,28 @@
+name: Validate ChuMP Downloads
+
+on:
+  schedule:
+    - cron: "0 18 * * *"   # Runs daily at 18:00 UTC (10am PST)
+  workflow_dispatch:       # Allows manual triggering
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "packages/**"
+      - "validate_files.py"
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run script
+        run: python3 validate_files.py
