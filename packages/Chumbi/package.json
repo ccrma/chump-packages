@@ -1,0 +1,16 @@
+{
+    "authors": [
+        "Everett M. Carpenter"
+    ],
+    "description": "A Chump package designed for the creation of ambisonic architectures in ChucK. Meant for encoding, decoding and altering B-Format ambisonic signals, but misuse is always welcome.",
+    "homepage": "https://github.com/everettmcarpenter/Encode-Decode.chug",
+    "keywords": [
+        "ambisonics",
+        "chugins",
+        "spatialization",
+        "multichannel"
+    ],
+    "license": "MIT",
+    "name": "Chumbi",
+    "repository": "https://github.com/everettmcarpenter/Encode-Decode.chug"
+}
