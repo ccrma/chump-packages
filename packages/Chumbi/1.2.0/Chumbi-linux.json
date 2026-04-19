@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "x86_64",
+    "files": [
+        {
+            "checksum": "a89e4938b4369b0f247a3c84f4f8e1cfbb38be3be134cde101bf1bcd72508d5d",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chumbi/1.2.0/linux/Chumbi.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "linux",
+    "version": "1.2.0"
+}
