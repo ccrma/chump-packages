@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "556b293f3f96be4c2e703e951d2cfbf42abb81349db0ff4b16d3547722043c6e",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://github.com/vlshields/BSLN-303/releases/tag/v1.0.0/BSLN303.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 0
+    },
+    "os": "any",
+    "version": "1.0.0"
+}
