@@ -1,0 +1,23 @@
+{
+    "api_version": {
+        "major": 10,
+        "minor": 2
+    },
+    "arch": "arm64",
+    "files": [
+        {
+            "checksum": "e3bbe5da6514d1e20ba01912f7c74b7bd76e5b6496ba63b11b02871738e5cad1",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chonnx/1.0.0/mac/Chonnx.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 4,
+        "patch": 0
+    },
+    "os": "mac",
+    "version": "1.0.0"
+}

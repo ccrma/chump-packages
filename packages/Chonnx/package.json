@@ -1,0 +1,15 @@
+{
+    "authors": [
+        "Santiago Quesada"
+    ],
+    "description": "Generic ONNX Runtime inference for ChucK: load any float32 .onnx model and run it in real time.",
+    "homepage": "https://github.com/Santiquesada/Chonnx",
+    "keywords": [
+        "machine learning",
+        "onnx",
+        "inference"
+    ],
+    "license": "MIT",
+    "name": "Chonnx",
+    "repository": "https://github.com/Santiquesada/Chonnx"
+}
