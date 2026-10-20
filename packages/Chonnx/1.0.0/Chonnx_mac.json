@@ -6,7 +6,7 @@
     "arch": "arm64",
     "files": [
         {
-            "checksum": "e3bbe5da6514d1e20ba01912f7c74b7bd76e5b6496ba63b11b02871738e5cad1",
+            "checksum": "fd25bd226b9474a64044079a33f8ed86f5b2753c7c9f8a9fbbd929f41323dd1c",
             "file_type": "zip",
             "local_dir": "./",
             "url": "https://ccrma.stanford.edu/~nshaheed/chugins/Chonnx/1.0.0/mac/Chonnx.zip"
