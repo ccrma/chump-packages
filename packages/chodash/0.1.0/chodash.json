@@ -1,0 +1,19 @@
+{
+    "arch": "all",
+    "files": [
+        {
+            "checksum": "b9a966eddd10371be1d70e42954feb8e0a91093d726c1bb2048b2da6a883f571",
+            "file_type": "zip",
+            "local_dir": "./",
+            "url": "https://ccrma.stanford.edu/~brendan/chodash/chump/0.1.0/chodash.zip"
+        }
+    ],
+    "language_version_min": {
+        "major": 5,
+        "mega": 1,
+        "minor": 5,
+        "patch": 8
+    },
+    "os": "any",
+    "version": "0.1.0"
+}
