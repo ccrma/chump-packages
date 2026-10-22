@@ -1,0 +1,17 @@
+{
+    "authors": [
+        "Vince Shields"
+    ],
+    "description": "A Chugraph UGen that emulates the historical acid synthesizer.",
+    "homepage": "https://github.com/vlshields/BSLN-303.git",
+    "keywords": [
+        "resonant",
+        "UGen",
+        "303",
+        "synth",
+        "acid"
+    ],
+    "license": "MIT",
+    "name": "BSLN303",
+    "repository": "https://github.com/vlshields/BSLN-303.git"
+}
