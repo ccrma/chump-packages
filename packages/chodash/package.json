@@ -1,0 +1,25 @@
+{
+    "authors": [
+        "Brendan Zelikman"
+    ],
+    "description": "A ChucK + ChuGL toolkit for input, animation, physics, time, scenes, and data.",
+    "homepage": "https://ccrma.stanford.edu/~brendan/chodash",
+    "keywords": [
+        "chugl",
+        "toolkit",
+        "input",
+        "keyboard",
+        "mouse",
+        "button",
+        "text",
+        "tween",
+        "physics",
+        "camera",
+        "scenes",
+        "json",
+        "csv"
+    ],
+    "license": "MIT",
+    "name": "chodash",
+    "repository": ""
+}
